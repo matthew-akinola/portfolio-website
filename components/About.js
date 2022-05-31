@@ -74,12 +74,12 @@ function About({ aboutRef }) {
                 </ul>
               </div>
             </p>
-            <div className="col-span-7 md:col-span-3 flex items-center justify-center">
+            <div className="col-span-7 md:col-span-3 flex flex-col items-center justify-start">
               <div className="w-fit border-2 border-lime-400 bg-lime-400 h-fit rounded-lg">
                 <img
                   src={Personal.src}
-                  width={"200px"}
-                  height={"500px"}
+                  width={"300px"}
+                  height={"600px"}
                   className="border-2 border-lime-400 rounded-lg hover:opacity-100 opacity-70 transition-all duration-300"
                 />
               </div>
