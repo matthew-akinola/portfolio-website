@@ -49,7 +49,7 @@ function Hero({ heroRef, handleShade }) {
       animate="show"
       id="hero"
       ref={heroRef}
-      className="mx-5 my-10 flex  items-center justify-around min-h-[92vh]   hero "
+      className=" my-10 flex  items-center justify-around min-h-[92vh]   hero "
     >
       <div className="md:mx-80 mx-40" ref={ref}>
         <p className=" font-poppins">
