@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -5,7 +7,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   daisyui: {
     themes: ["night", "forest", "halloween", "dark", "cupcake", "lemonade"],

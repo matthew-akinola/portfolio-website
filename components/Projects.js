@@ -48,7 +48,7 @@ function Projects({ projectRef }) {
         ref={projectRef}
       >
         <div className="my-10">
-          <div className="flex w-full items-center justify-center mx-7">
+          <div className="flex w-full items-center justify-center px-4">
             {" "}
             <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl  text-2xl my-8">
               Projects
@@ -73,10 +73,12 @@ function Projects({ projectRef }) {
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title  text-xl text-primary">
+                    <h2 className="card-title  text-xl text-primary font-poppins">
                       {project.name}
                     </h2>
-                    <p className="forest:text-accent ">{project.desp}.</p>
+                    <p className="forest:text-accent font-poppins">
+                      {project.desp}.
+                    </p>
                     <div className="card-actions justify-end">
                       <button className="btn bg-primary text-white border-primary">
                         <a href={project.githubLink} target="_blank">
@@ -84,7 +86,7 @@ function Projects({ projectRef }) {
                         </a>
                       </button>
                       <button className="btn bg-primary text-white border-primary">
-                        <a href={project.liveLink}>
+                        <a href={project.liveLink} target="_blank">
                           <ExternalLinkIcon className="w-6" />
                         </a>
                       </button>

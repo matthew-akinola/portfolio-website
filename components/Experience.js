@@ -31,11 +31,7 @@ function Experience({ expRef }) {
   }, [inView]);
   return (
     <div ref={ref}>
-      <div
-        className="h-fit xl:h-fit  md:h-screen pt-24  mx-5 my-16"
-        id="exp"
-        ref={expRef}
-      >
+      <div className="  min-h-[92vh] pt-24  mx-5 my-16" id="exp" ref={expRef}>
         <motion.div animate={animation} className="my-9">
           <div className="flex w-full items-center justify-center mx-5">
             {" "}
@@ -46,7 +42,7 @@ function Experience({ expRef }) {
           </div>
 
           <div className="flex w-full justify-center">
-            <div className="tabs mt-20 mb-10 ">
+            <div className="tabs mt-20 mb-10 font-poppins">
               <a
                 className={`tab tab-lg hover:bg-base-300 transition-all duration-500 forest:text-white lemonade:text-accent tab-bordered ${
                   currentTab === 1
@@ -86,9 +82,9 @@ function Experience({ expRef }) {
                   Frontend Developer{" "}
                   <span className="text-lime-400">@HNGi8</span>
                 </h2>
-                <p className="my-5">Internship</p>
-                <p className="my-5">August 2021 - Oct 2021</p>
-                <div className="exp w-fit  forest:text-white lemonade:text-accent ">
+                <p className="my-5 font-poppins">Internship</p>
+                <p className="my-5 font-poppins">August 2021 - Oct 2021</p>
+                <div className="exp w-fit  forest:text-white lemonade:text-accent  font-poppins">
                   <ul>
                     <li className="">
                       Worked with a large team of developers to build the
@@ -111,10 +107,10 @@ function Experience({ expRef }) {
                   React Js Developer{" "}
                   <span className="text-lime-400">@KodeCamp</span>
                 </h2>
-                <p className="my-5">Internship(Remote)</p>
-                <p className="my-5">August 2021 - Dec 2021</p>
-                <p className="my-5">Mar 2022 - Present</p>
-                <div className="exp w-fit  forest:text-white lemonade:text-accent ">
+                <p className="my-5 font-poppins">Internship(Remote)</p>
+                <p className="my-5 font-poppins">August 2021 - Dec 2021</p>
+                <p className="my-5 font-poppins">Mar 2022 - Present</p>
+                <div className="exp w-fit  forest:text-white lemonade:text-accent  font-poppins">
                   <ul>
                     <li className="">
                       Worked with developers to build a learning managment
@@ -136,9 +132,9 @@ function Experience({ expRef }) {
                   Software Engineer{" "}
                   <span className="text-lime-400">@alx_africa</span>
                 </h2>
-                <p className="my-2">Internship</p>
-                <p className="my-2">Feb 2022 - Present</p>
-                <div className="exp w-fit  forest:text-white lemonade:text-accent ">
+                <p className="my-2 font-poppins">Internship</p>
+                <p className="my-2 font-poppins">Feb 2022 - Present</p>
+                <div className="exp w-fit  forest:text-white lemonade:text-accent  font-poppins">
                   <ul>
                     <li className="">
                       Learnt how to write C programs, Bash scripts, Python

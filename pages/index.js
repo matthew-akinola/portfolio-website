@@ -61,6 +61,10 @@ export default function Home() {
       <Head>
         <title>Dev-Jay</title>
         <link rel="icon" href={headIcon.src} sizes="16x16 32x32" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Poppins"
+          rel="stylesheet"
+        />
       </Head>
 
       <div className="cus-scroll">

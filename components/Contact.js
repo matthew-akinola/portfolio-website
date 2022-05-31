@@ -49,14 +49,21 @@ function Contact({ contactRef, AlertDismissible }) {
 
       emailjs
         .send(serviceId, templateId, templateParams, userId)
-        .then((response) => console.log(response))
-        .then((error) => console.log(error));
-
-      setName("");
-      setEmail("");
-      setMessage("");
-      setEmailSent(true);
-      AlertDismissible("Sent!");
+        .then((response) => {
+          console.log(response);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setEmailSent(true);
+          AlertDismissible("Sent!");
+        })
+        .then((error) => {
+          console.log(error);
+          AlertDismissible(
+            "Something went wrong, Refresh page and try again",
+            true
+          );
+        });
     } else {
       AlertDismissible("Please fill in all fields.", true);
     }
@@ -78,7 +85,7 @@ function Contact({ contactRef, AlertDismissible }) {
             <hr className="w-24 mx-5" />
           </div>
           <div className="flex w-full items-center justify-center my-10">
-            <form className="w-full mx-10" onSubmit={submit}>
+            <form className="w-full mx-10 font-poppins" onSubmit={submit}>
               {" "}
               <div className="flex w-full items-center justify-center  my-5">
                 {" "}
