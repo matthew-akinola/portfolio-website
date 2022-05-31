@@ -50,7 +50,7 @@ function Navbar({
   return (
     <div
       className={`
-    fixed top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 dark:bg-base-100 bg-slate-300 text-base-content ${
+    fixed top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content ${
       shade && "shadow-lg"
     }
     `}
@@ -73,7 +73,7 @@ function Navbar({
           color: "white",
         }}
       />
-      <div className="navbar sticky top-0 z-50 dark:bg-base-100 bg-slate-300 dark:text-white text-gray-800">
+      <div className="navbar sticky top-0 z-50 bg-base-100  text-primary">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -100,7 +100,7 @@ function Navbar({
             </label>
             <ul
               tabIndex="0"
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow dark:bg-base-100 bg-slate-300 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100  rounded-box w-52"
             >
               <li>
                 <a
@@ -176,7 +176,7 @@ function Navbar({
             </ul>
           </div>
           <a
-            className="btn btn-ghost normal-case text-xl group text-lime-500"
+            className="btn btn-ghost normal-case text-xl group text-primary"
             onClick={() => refScroll(heroRef)}
           >
             <motion.img
@@ -264,13 +264,13 @@ function Navbar({
         <div className="navbar-end">
           <a
             onClick={() => refScroll(contactRef)}
-            className="btn btn-ghost bg-lime-500 text-white md:inline-flex hidden"
+            className="btn btn-ghost bg-primary text-white md:inline-flex hidden"
           >
             Contact Me
           </a>
           <a
             onClick={() => refScroll(contactRef)}
-            className="btn btn-ghost bg-lime-500 text-white md:hidden text-xs"
+            className="btn btn-ghost bg-primary text-white md:hidden text-xs"
           >
             <UserIcon className="w-5 text-white" />
           </a>

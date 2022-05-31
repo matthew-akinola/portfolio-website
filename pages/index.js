@@ -55,11 +55,8 @@ export default function Home() {
   }
   return (
     <div
-      className={
-        darkmode
-          ? " overflow-hidden  dark dark:bg-base-100"
-          : " overflow-hidden bg-slate-200 dark:bg-base-100"
-      }
+      data-theme={darkmode ? "forest" : "lemonade"}
+      className={" overflow-hidden bg-base-100"}
     >
       <Head>
         <title>Dev-Jay</title>

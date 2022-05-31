@@ -50,7 +50,7 @@ function Projects({ projectRef }) {
         <div className="my-10">
           <div className="flex w-full items-center justify-center mx-7">
             {" "}
-            <h1 className="prose prose-lg text-lime-400 font-bold md:text-6xl xs:text-4xl  text-2xl my-8">
+            <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl  text-2xl my-8">
               Projects
             </h1>{" "}
             <hr className="w-24 mx-5" />
@@ -63,9 +63,9 @@ function Projects({ projectRef }) {
                   initial="hidden"
                   animate={"show"}
                   key={index}
-                  className="card glss  dark:bg-base-200 bg-slate-300 shadow-xl"
+                  className="card glss bg-base-300 shadow-xl"
                 >
-                  <figure className="bg-lime-400">
+                  <figure className="bg-primary">
                     <img
                       src={project.image.src}
                       className="opacity-75 hover:opacity-100 cursor-pointer transition-all duration-500"
@@ -73,19 +73,17 @@ function Projects({ projectRef }) {
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title  text-xl text-lime-400">
+                    <h2 className="card-title  text-xl text-primary">
                       {project.name}
                     </h2>
-                    <p className="dark:text-gray-400 text-slate-900 ">
-                      {project.desp}.
-                    </p>
+                    <p className="forest:text-accent ">{project.desp}.</p>
                     <div className="card-actions justify-end">
-                      <button className="btn bg-lime-400 text-white border-lime-400">
+                      <button className="btn bg-primary text-white border-primary">
                         <a href={project.githubLink} target="_blank">
                           <img src={gitIcon.src} alt="" className="w-6" />
                         </a>
                       </button>
-                      <button className="btn bg-lime-400 text-white border-lime-400">
+                      <button className="btn bg-primary text-white border-primary">
                         <a href={project.liveLink}>
                           <ExternalLinkIcon className="w-6" />
                         </a>

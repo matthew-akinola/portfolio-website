@@ -52,12 +52,12 @@ function Hero({ heroRef, handleShade }) {
       className=" my-10 flex  items-center justify-around min-h-[92vh]   hero "
     >
       <div className="md:mx-80 mx-40" ref={ref}>
-        <p className=" font-poppins">
+        <p className=" font-poppins ">
           <motion.span
             variants={item}
             initial="hidden"
             animate="show"
-            className="text-lime-500 font-poppins leading-5 font-bold "
+            className="text-primary font-poppins leading-5 font-bold "
           >
             Hi, my name is
           </motion.span>
@@ -67,7 +67,7 @@ function Hero({ heroRef, handleShade }) {
             variants={item}
             initial="hidden"
             animate="show"
-            className="md:text-6xl text-4xl dark:text-gray-200 text-gray-900 font-extrabold font-sega"
+            className="md:text-6xl text-4xl text-primary font-extrabold font-sega"
           >
             Jeje Yanfunmi.
           </motion.span>
@@ -77,7 +77,7 @@ function Hero({ heroRef, handleShade }) {
             variants={item}
             initial="hidden"
             animate="show"
-            className="font-extrabold md:text-6xl text-4xl dark:text-slate-400 text-gray-700 "
+            className="font-extrabold md:text-6xl text-4xl text-orange-600 "
           >
             I build things for the web.
           </motion.span>
@@ -88,7 +88,7 @@ function Hero({ heroRef, handleShade }) {
             variants={item}
             initial="hidden"
             animate="show"
-            className="justify-start dark:text-gray-400 text-slate-900"
+            className="justify-start forest:text-white lemonade:text-accent"
           >
             I'm a software engineer specilized in building top notch full-stack
             web applications. I'm currently learning blockchain development and

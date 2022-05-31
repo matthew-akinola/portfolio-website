@@ -39,7 +39,7 @@ function Experience({ expRef }) {
         <motion.div animate={animation} className="my-9">
           <div className="flex w-full items-center justify-center mx-5">
             {" "}
-            <h1 className="prose prose-lg text-lime-400 font-bold md:text-6xl  xs:text-4xl text-2xl">
+            <h1 className="prose prose-lg text-primary font-bold md:text-6xl  xs:text-4xl text-2xl">
               Experience
             </h1>{" "}
             <hr className="w-24 mx-5" />
@@ -48,7 +48,7 @@ function Experience({ expRef }) {
           <div className="flex w-full justify-center">
             <div className="tabs mt-20 mb-10 ">
               <a
-                className={`tab tab-lg hover:bg-base-300 transition-all duration-500 dark:text-gray-400 text-slate-900 tab-bordered ${
+                className={`tab tab-lg hover:bg-base-300 transition-all duration-500 forest:text-white lemonade:text-accent tab-bordered ${
                   currentTab === 1
                     ? "tab-active text-lime-400 border-lime-400"
                     : ""
@@ -58,7 +58,7 @@ function Experience({ expRef }) {
                 HNG
               </a>
               <a
-                className={`tab tab-lg hover:bg-base-300 transition-all duration-500 dark:text-gray-400 text-slate-900 tab-bordered ${
+                className={`tab tab-lg hover:bg-base-300 transition-all duration-500 forest:text-white lemonade:text-accent tab-bordered ${
                   currentTab === 2
                     ? "tab-active text-lime-400 border-lime-400"
                     : ""
@@ -68,7 +68,7 @@ function Experience({ expRef }) {
                 KodeCamp
               </a>
               <a
-                className={`tab tab-lg hover:bg-base-300 transition-all duration-500 dark:text-gray-400 text-slate-900 tab-bordered ${
+                className={`tab tab-lg hover:bg-base-300 transition-all duration-500 forest:text-white lemonade:text-accent tab-bordered ${
                   currentTab === 3
                     ? "tab-active text-lime-400 border-lime-400"
                     : ""
@@ -82,13 +82,13 @@ function Experience({ expRef }) {
           {currentTab === 1 && (
             <div className="flex w-full justify-center">
               <div className="mx-10 md:mx-28 lg:mx-80">
-                <h2 className="font-poppins md:text-2xl dark:text-white text-black  font-medium">
+                <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
                   Frontend Developer{" "}
                   <span className="text-lime-400">@HNGi8</span>
                 </h2>
                 <p className="my-5">Internship</p>
                 <p className="my-5">August 2021 - Oct 2021</p>
-                <div className="exp w-fit  dark:text-gray-400 text-slate-900 ">
+                <div className="exp w-fit  forest:text-white lemonade:text-accent ">
                   <ul>
                     <li className="">
                       Worked with a large team of developers to build the
@@ -107,14 +107,14 @@ function Experience({ expRef }) {
           {currentTab === 2 && (
             <div className="flex w-full justify-center">
               <div className="mx-10 md:mx-28 lg:mx-80">
-                <h2 className="font-poppins md:text-2xl dark:text-white text-black  font-medium">
+                <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
                   React Js Developer{" "}
                   <span className="text-lime-400">@KodeCamp</span>
                 </h2>
                 <p className="my-5">Internship(Remote)</p>
                 <p className="my-5">August 2021 - Dec 2021</p>
                 <p className="my-5">Mar 2022 - Present</p>
-                <div className="exp w-fit  dark:text-gray-400 text-slate-900 ">
+                <div className="exp w-fit  forest:text-white lemonade:text-accent ">
                   <ul>
                     <li className="">
                       Worked with developers to build a learning managment
@@ -132,13 +132,13 @@ function Experience({ expRef }) {
           {currentTab === 3 && (
             <div className="flex w-full justify-center">
               <div className="mx-10 md:mx-28 lg:mx-80">
-                <h2 className="font-poppins md:text-2xl dark:text-white text-black  font-medium">
+                <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
                   Software Engineer{" "}
                   <span className="text-lime-400">@alx_africa</span>
                 </h2>
                 <p className="my-2">Internship</p>
                 <p className="my-2">Feb 2022 - Present</p>
-                <div className="exp w-fit  dark:text-gray-400 text-slate-900 ">
+                <div className="exp w-fit  forest:text-white lemonade:text-accent ">
                   <ul>
                     <li className="">
                       Learnt how to write C programs, Bash scripts, Python

@@ -68,12 +68,11 @@ function Contact({ contactRef, AlertDismissible }) {
         className=" h-fit pt-44 mb-12"
         ref={contactRef}
       >
-        
         <div className="mx-8">
           {" "}
           <div className="flex w-full items-center justify-center mx-7">
             {" "}
-            <h1 className="prose prose-lg text-lime-400 font-bold md:text-6xl xs:text-4xl  text-2xl">
+            <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl  text-2xl">
               Get in Touch
             </h1>{" "}
             <hr className="w-24 mx-5" />
@@ -86,7 +85,7 @@ function Contact({ contactRef, AlertDismissible }) {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="input input-bordered border-lime-400 w-full max-w-xl  input-lg shadow-lg dark:bg-base-300 bg-slate-100"
+                  className="input input-bordered border-primary w-full max-w-xl  input-lg shadow-md bg-base-200"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -96,7 +95,7 @@ function Contact({ contactRef, AlertDismissible }) {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="input input-bordered border-lime-400 w-full max-w-xl input-lg   shadow-lg dark:bg-base-300 bg-slate-100"
+                  className="input input-bordered border-primary w-full max-w-xl input-lg   shadow-md bg-base-200"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -108,14 +107,14 @@ function Contact({ contactRef, AlertDismissible }) {
                   rows="10"
                   placeholder="Your message"
                   value={message}
-                  className=" border-lime-400  md:w-2/3 mx-2  textarea  dark:bg-base-300 bg-slate-100"
+                  className=" border-primary  md:w-2/3 mx-2  textarea placeholder:text-lg  bg-base-200 shadow-md"
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <div className="flex w-full items-center justify-center  my-5">
                 <button
                   type="submit"
-                  className="btn btn-outline border-lime-400 text-lime-400 hover:bg-lime-400 xl:btn-xl hover:text-white"
+                  className="btn btn-outline border-primary text-primary hover:bg-primary xl:btn-xl hover:text-white"
                 >
                   Send Message
                 </button>

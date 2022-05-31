@@ -37,13 +37,13 @@ function About({ aboutRef }) {
         <motion.div animate={animation} className="w-full mt-28">
           <div className="flex w-full mx-5 items-center justify-center">
             {" "}
-            <h1 className="prose prose-lg text-lime-400 font-bold md:text-6xl xs:text-4xl text-2xl">
+            <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl text-2xl">
               About Me
             </h1>{" "}
             <hr className="w-24 mx-5" />
           </div>
           <div className="flex flex-col-reverse md:grid grid-cols-7  my-8 md:pt-10 sec2__right">
-            <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28 mx-5 md:my-0 my-10 dark:text-gray-400 text-slate-900 ">
+            <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28 mx-5 md:my-0 my-10 forest:text-white lemonade:text-accent ">
               Hello! My name is Yanfunmi, I am passionate about tech and i like
               building web apps. My interest in web development started back in
               2021. I'm a good problem solver, a chess player and a hard working
@@ -75,12 +75,12 @@ function About({ aboutRef }) {
               </div>
             </p>
             <div className="col-span-7 md:col-span-3 flex flex-col items-center justify-start">
-              <div className="w-fit border-2 border-lime-400 bg-lime-400 h-fit rounded-lg">
+              <div className="w-fit border-2 border-primary bg-primary h-fit rounded-lg">
                 <img
                   src={Personal.src}
                   width={"300px"}
                   height={"600px"}
-                  className="border-2 border-lime-400 rounded-lg hover:opacity-100 opacity-70 transition-all duration-300"
+                  className="border-2 border-primary rounded-lg hover:opacity-100 opacity-70 transition-all duration-300"
                 />
               </div>
             </div>
