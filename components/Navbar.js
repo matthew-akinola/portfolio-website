@@ -4,6 +4,8 @@ import React from "react";
 import logo from "../svgs/logoj.svg";
 import { UserIcon } from "@heroicons/react/solid";
 import { useStateValue } from "../stateProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const svgVariant = {
   hidden: { rotate: -360 },
@@ -53,6 +55,24 @@ function Navbar({
     }
     `}
     >
+      <ToastContainer
+        position="top-right"
+        autoClose={1400}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        bodyClassName={"z-50"}
+        bodyStyle={{ zIndex: 100, top: "100px" }}
+        draggable
+        pauseOnHover
+        className={"z-50"}
+        toastStyle={{
+          backgroundColor: "#1F2A2D",
+          color: "white",
+        }}
+      />
       <div className="navbar sticky top-0 z-50 dark:bg-base-100 bg-slate-300 dark:text-white text-gray-800">
         <div className="navbar-start">
           <div className="dropdown">

@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
-function Contact({ contactRef }) {
+function Contact({ contactRef, AlertDismissible }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -34,29 +34,7 @@ function Contact({ contactRef }) {
       });
     }
   }, [inView]);
-  async function AlertDismissible(words, error) {
-    if (!error) {
-      toast.success(words, {
-        position: "bottom-right",
-        autoClose: 1400,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    } else {
-      toast.error(words, {
-        position: "bottom-right",
-        autoClose: 1400,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-  }
+
   const submit = (e) => {
     e.preventDefault();
     if (name && email && message) {
@@ -90,18 +68,7 @@ function Contact({ contactRef }) {
         className=" h-fit pt-44 mb-12"
         ref={contactRef}
       >
-        <ToastContainer
-          position="bottom-right"
-          autoClose={1400}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          toastStyle={{ backgroundColor: "#1F2A2D", color: "white" }}
-        />
+        
         <div className="mx-8">
           {" "}
           <div className="flex w-full items-center justify-center mx-7">

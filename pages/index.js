@@ -1,6 +1,7 @@
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import Head from "next/head";
 import { useState, useRef } from "react";
+import { toast } from "react-toastify";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Experience from "../components/Experience";
@@ -29,6 +30,29 @@ export default function Home() {
   const refScroll = (e) => {
     e.current?.scrollIntoView({ behaviour: "smooth" });
   };
+  async function AlertDismissible(words, error) {
+    if (!error) {
+      toast.success(words, {
+        position: "top-right",
+        autoClose: 1400,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.error(words, {
+        position: "top-right",
+        autoClose: 1400,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
   return (
     <div
       className={
@@ -65,7 +89,11 @@ export default function Home() {
                 <About refScroll={refScroll} aboutRef={aboutRef} />
                 <Experience refScroll={refScroll} expRef={expRef} />
                 <Projects refScroll={refScroll} projectRef={projectRef} />
-                <Contact refScroll={refScroll} contactRef={contactRef} />
+                <Contact
+                  refScroll={refScroll}
+                  contactRef={contactRef}
+                  AlertDismissible={AlertDismissible}
+                />
                 <Footer />
               </>
             )}
