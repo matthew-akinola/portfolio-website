@@ -53,22 +53,23 @@ function Projects({ projectRef }) {
             <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl  text-2xl my-8">
               Projects
             </h1>{" "}
-            <hr className="w-24 mx-5" />
+            <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
-          <div className="grid md:grid-cols-2 lg:gap-10 gap-5 mx-10 my-10">
+          <div className="grid place-items-center  lg:gap-36 gap-5 mx-10 md:mx-20 my-10">
             {projectData.map((project, index) => {
               return (
                 <motion.div
                   variants={item}
                   initial="hidden"
                   animate={"show"}
+                  whileHover={{ scale: 1.1 }}
                   key={index}
-                  className="card glss bg-base-300 shadow-xl"
+                  className="card w-full md:w-2/3 glass bg-base-300 shadow-md image-full shadow-neutral hover:opacity-100"
                 >
                   <figure className="bg-primary">
                     <img
                       src={project.image.src}
-                      className="opacity-75 hover:opacity-100 cursor-pointer transition-all duration-500"
+                      className="hover:opacity-100 cursor-pointer transition-all duration-500"
                       alt="Album"
                     />
                   </figure>

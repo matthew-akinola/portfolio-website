@@ -38,7 +38,7 @@ function Experience({ expRef }) {
             <h1 className="prose prose-lg text-primary font-bold md:text-6xl  xs:text-4xl text-2xl">
               Experience
             </h1>{" "}
-            <hr className="w-24 mx-5" />
+            <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
 
           <div className="flex w-full justify-center">

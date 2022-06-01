@@ -6,6 +6,7 @@ import { UserIcon } from "@heroicons/react/solid";
 import { useStateValue } from "../stateProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SocialIcon } from "react-social-icons";
 
 const svgVariant = {
   hidden: { rotate: -360 },
@@ -128,6 +129,14 @@ function Navbar({
                 </a>
               </li>
               <li>
+                <a
+                  onClick={() => refScroll(contactRef)}
+                  className="active:bg-lime-500"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
                 <a>
                   <label
                     className="swap swap-rotate inline-flex md:hidden"
@@ -217,6 +226,14 @@ function Navbar({
                 Projects
               </a>
             </li>
+            <li>
+              <a
+                onClick={() => refScroll(contactRef)}
+                className="active:bg-lime-500"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         <label
@@ -262,18 +279,87 @@ function Navbar({
           </motion.svg>
         </label>
         <div className="navbar-end">
-          <a
-            onClick={() => refScroll(contactRef)}
-            className="btn btn-ghost bg-primary text-white md:inline-flex hidden"
-          >
-            Contact Me
-          </a>
-          <a
-            onClick={() => refScroll(contactRef)}
-            className="btn btn-ghost bg-primary text-white md:hidden text-xs"
-          >
-            <UserIcon className="w-5 text-white" />
-          </a>
+          <div className="dropdown">
+            <label tabIndex="0" className="btn btn-ghost lg:hidden">
+              <motion.svg
+                variants={svgVariant}
+                initial={"hidden"}
+                animate="visible"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <g data-name="Layer 2">
+                  <g data-name="chevron-down">
+                    <rect width="24" height="24" opacity="0" />
+                    <motion.path
+                      variants={pathVariants}
+                      initial={"hidden"}
+                      animate="visible"
+                      d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z"
+                    />
+                  </g>
+                </g>
+              </motion.svg>
+            </label>
+            <ul
+              tabIndex="0"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100   rounded-box w-fit font-poppins"
+            >
+              <li>
+                <SocialIcon
+                  url="https://github.com/Dubjay18/"
+                  fgColor="green"
+                  bgColor="transparent"
+                  className="hover:scale-125 transition-all duration-500 w-5"
+                />
+              </li>
+              <li>
+                <SocialIcon
+                  url="https://www.linkedin.com/in/oluwayanfunmi-jeje-a023b2210/"
+                  fgColor="green"
+                  bgColor="transparent"
+                  className="hover:scale-125 transition-all duration-500"
+                />
+              </li>
+              <li>
+                <SocialIcon
+                  url="https://twitter.com/@YanfunmiJ"
+                  fgColor="green"
+                  bgColor="transparent"
+                  className="hover:scale-125 transition-all duration-500"
+                />
+              </li>
+            </ul>
+          </div>
+          <div className="lg:flex hidden">
+            <div>
+              <SocialIcon
+                url="https://github.com/Dubjay18/"
+                fgColor="green"
+                bgColor="transparent"
+                className="hover:scale-125 transition-all duration-500 w-5"
+              />
+            </div>
+            <div>
+              <SocialIcon
+                url="https://www.linkedin.com/in/oluwayanfunmi-jeje-a023b2210/"
+                fgColor="green"
+                bgColor="transparent"
+                className="hover:scale-125 transition-all duration-500"
+              />
+            </div>
+            <div>
+              <SocialIcon
+                url="https://twitter.com/@YanfunmiJ"
+                fgColor="green"
+                bgColor="transparent"
+                className="hover:scale-125 transition-all duration-500"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

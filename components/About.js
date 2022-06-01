@@ -1,6 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import Tilt from "react-tilt";
 import { useInView } from "react-intersection-observer";
 import Personal from "../images/ab.jpg";
 function About({ aboutRef }) {
@@ -75,14 +76,14 @@ function About({ aboutRef }) {
               </div>
             </p>
             <div className="col-span-7 md:col-span-3 flex flex-col items-center justify-start">
-              <div className="w-fit border-2 border-primary bg-primary h-fit rounded-lg">
+              <Tilt className="w-fit border-2 border-primary bg-primary h-fit rounded-lg">
                 <img
                   src={Personal.src}
                   width={"200px"}
                   height={"600px"}
                   className="border-2 border-primary rounded-lg hover:opacity-100 opacity-70 transition-all duration-300"
                 />
-              </div>
+              </Tilt>
             </div>
           </div>
         </motion.div>
