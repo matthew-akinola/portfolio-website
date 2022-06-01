@@ -1,9 +1,16 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
+import { red } from "tailwindcss/colors";
 
 function Footer() {
   return (
-    <footer className="footer items-center p-4 dark:bg-transparent text-neutral-content">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="footer items-center p-4 dark:bg-transparent text-neutral-content"
+    >
       <div className="items-center grid-flow-col">
         <svg
           width="36"
@@ -42,7 +49,7 @@ function Footer() {
           <SocialIcon url="https://twitter.com/@YanfunmiJ" fgColor="white" />
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 
