@@ -49,8 +49,43 @@ function Hero({ heroRef, handleShade }) {
       animate="show"
       id="hero"
       ref={heroRef}
-      className=" my-10 flex  items-center justify-around min-h-[92vh]   hero "
+      className=" my-10 flex  items-center justify-around min-h-[92vh] relative  hero "
     >
+      <motion.svg
+        className={"absolute w-20"}
+        initial={{ opacity: 0, x: 0, y: 0 }}
+        animate={{ opacity: 1, x: [200, 150, 0], y: [0, -50, -100] }}
+        transition={{ duration: 6, delay: 2.5, yoyo: Infinity }}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        opacity=".3"
+        fill="#84CC16"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+          opacity=".3"
+          fill="#84CC16"
+        />
+      </motion.svg>
+      <motion.svg
+        className={"absolute w-20"}
+        initial={{ opacity: 0, x: 0, y: 0 }}
+        animate={{ opacity: 1, x: [-200, -150, 0], y: [0, 50, 100] }}
+        transition={{ duration: 6, delay: 2.5, yoyo: Infinity }}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        opacity=".3"
+        fill="#84CC16"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+          opacity=".3"
+          fill="#84CC16"
+        />
+      </motion.svg>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
+      </svg> */}
       <div className="md:mx-80 mx-40" ref={ref}>
         <p className=" font-poppins ">
           <motion.span

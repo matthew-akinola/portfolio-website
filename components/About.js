@@ -16,7 +16,7 @@ function About({ aboutRef }) {
           type: "spring",
 
           staggerChildren: 0.6,
-          duration: 0.3,
+          duration: 0.2,
           stiffness: 50,
         },
       });
@@ -41,7 +41,7 @@ function About({ aboutRef }) {
             <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl text-2xl">
               About Me
             </h1>{" "}
-            <hr className="w-24 mx-5" />
+            <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
           <div className="flex flex-col-reverse md:grid grid-cols-7  my-8 md:pt-10 sec2__right">
             <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28  md:my-0 my-10 forest:text-white lemonade:text-accent md:px-0 px-5 font-poppins">
@@ -77,7 +77,8 @@ function About({ aboutRef }) {
             </p>
             <div className="col-span-7 md:col-span-3 flex flex-col items-center justify-start">
               <Tilt className="w-fit border-2 border-primary bg-primary h-fit rounded-lg">
-                <img
+                <motion.img
+                  animate={{ translateX: -4, translateY: -4 }}
                   src={Personal.src}
                   width={"200px"}
                   height={"600px"}

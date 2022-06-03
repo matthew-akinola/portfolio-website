@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import logo from "../svgs/logoj.svg";
-import { UserIcon } from "@heroicons/react/solid";
+import { ChevronDownIcon, UserIcon } from "@heroicons/react/solid";
 import { useStateValue } from "../stateProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -51,8 +51,8 @@ function Navbar({
   return (
     <div
       className={`
-    fixed top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content ${
-      shade && "shadow-lg"
+    fixed top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-500 bg-base-100 text-base-content ${
+      shade && "shadow shadow-primary"
     }
     `}
     >
@@ -281,28 +281,7 @@ function Navbar({
         <div className="navbar-end">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
-              <motion.svg
-                variants={svgVariant}
-                initial={"hidden"}
-                animate="visible"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <g data-name="Layer 2">
-                  <g data-name="chevron-down">
-                    <rect width="24" height="24" opacity="0" />
-                    <motion.path
-                      variants={pathVariants}
-                      initial={"hidden"}
-                      animate="visible"
-                      d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z"
-                    />
-                  </g>
-                </g>
-              </motion.svg>
+              <ChevronDownIcon className="w-8" />
             </label>
             <ul
               tabIndex="0"

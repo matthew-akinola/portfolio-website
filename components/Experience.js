@@ -32,7 +32,71 @@ function Experience({ expRef }) {
   return (
     <div ref={ref}>
       <div className="  min-h-[92vh] pt-24  mx-5 my-16" id="exp" ref={expRef}>
-        <motion.div animate={animation} className="my-9">
+        <motion.div animate={animation} className="my-9 relative">
+          <motion.svg
+            className={"absolute w-20 left-96"}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: 1, x: [200, 150, 0], y: [0, -50, -100] }}
+            transition={{ duration: 6, delay: 0.5, yoyo: Infinity }}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            opacity=".3"
+            fill="#84CC16"
+          >
+            <path
+              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+              opacity=".3"
+              fill="#84CC16"
+            />
+          </motion.svg>
+          <motion.svg
+            className={"absolute w-20 left-96"}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: 1, x: [-200, -150, 0], y: [0, 50, 100] }}
+            transition={{ duration: 6, delay: 0.5, yoyo: Infinity }}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            opacity=".3"
+            fill="#84CC16"
+          >
+            <path
+              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+              opacity=".3"
+              fill="#84CC16"
+            />
+          </motion.svg>
+          <motion.svg
+            className={"absolute w-20 top-72 left-2/3"}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: 1, x: [200, 150, 0], y: [0, -50, -100] }}
+            transition={{ duration: 6, delay: 0.5, yoyo: Infinity }}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            opacity=".3"
+            fill="#84CC16"
+          >
+            <path
+              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+              opacity=".3"
+              fill="#84CC16"
+            />
+          </motion.svg>
+          <motion.svg
+            className={"absolute w-20 top-72 left-2/3"}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: 1, x: [-200, -150, 0], y: [0, 50, 100] }}
+            transition={{ duration: 6, delay: 0.5, yoyo: Infinity }}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            opacity=".3"
+            fill="#84CC16"
+          >
+            <path
+              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+              opacity=".3"
+              fill="#84CC16"
+            />
+          </motion.svg>
           <div className="flex w-full items-center justify-center mx-5">
             {" "}
             <h1 className="prose prose-lg text-primary font-bold md:text-6xl  xs:text-4xl text-2xl">
@@ -80,7 +144,9 @@ function Experience({ expRef }) {
               <div className="mx-10 md:mx-28 lg:mx-80">
                 <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
                   Frontend Developer{" "}
-                  <span className="text-lime-400">@HNGi8</span>
+                  <span className="text-lime-400 underline decoration-dashed">
+                    @HNGi8
+                  </span>
                 </h2>
                 <p className="my-5 font-poppins">Internship</p>
                 <p className="my-5 font-poppins">August 2021 - Oct 2021</p>
@@ -105,7 +171,9 @@ function Experience({ expRef }) {
               <div className="mx-10 md:mx-28 lg:mx-80">
                 <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
                   React Js Developer{" "}
-                  <span className="text-lime-400">@KodeCamp</span>
+                  <span className="text-lime-400 underline decoration-dashed">
+                    @KodeCamp
+                  </span>
                 </h2>
                 <p className="my-5 font-poppins">Internship(Remote)</p>
                 <p className="my-5 font-poppins">August 2021 - Dec 2021</p>
@@ -130,7 +198,9 @@ function Experience({ expRef }) {
               <div className="mx-10 md:mx-28 lg:mx-80">
                 <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
                   Software Engineer{" "}
-                  <span className="text-lime-400">@alx_africa</span>
+                  <span className="text-lime-400 underline decoration-dashed">
+                    @alx_africa
+                  </span>
                 </h2>
                 <p className="my-2 font-poppins">Internship</p>
                 <p className="my-2 font-poppins">Feb 2022 - Present</p>

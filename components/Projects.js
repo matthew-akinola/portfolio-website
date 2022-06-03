@@ -19,17 +19,17 @@ function Projects({ projectRef }) {
   const animation = useAnimation();
   useEffect(() => {
     if (inView) {
-      animation.start({
+      animation.start((i) => ({
         opacity: 1,
         x: 0,
         transition: {
           type: "spring",
-
+          delay: i * 0.3,
           staggerChildren: 0.6,
           duration: 0.3,
           stiffness: 50,
         },
-      });
+      }));
       console.log(inView);
     }
     if (!inView) {
@@ -43,6 +43,7 @@ function Projects({ projectRef }) {
     <div ref={ref}>
       <motion.div
         animate={animation}
+        custom={0}
         className=" pt-24 mb-10"
         id="project"
         ref={projectRef}
@@ -55,16 +56,16 @@ function Projects({ projectRef }) {
             </h1>{" "}
             <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
-          <div className="grid place-items-center  lg:gap-36 gap-5 mx-10 md:mx-20 my-10">
+          <div className="grid lg:grid-cols-2 place-items-center  lg:gap-20 gap-5 mx-10 md:mx-20 my-10">
             {projectData.map((project, index) => {
               return (
                 <motion.div
-                  variants={item}
-                  initial="hidden"
-                  animate={"show"}
+                  animate={animation}
+                  custom={index}
                   whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   key={index}
-                  className="card w-full md:w-2/3 glass bg-base-300 shadow-md image-full shadow-neutral hover:opacity-100"
+                  className="card w-full md:glass bg-base-300 shadow-md image-full lg:my-0 my-11 shadow-neutral hover:opacity-100"
                 >
                   <figure className="bg-primary">
                     <img
@@ -74,12 +75,10 @@ function Projects({ projectRef }) {
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title  text-xl text-primary font-poppins">
+                    <h2 className="card-title  text-xl text-primary ">
                       {project.name}
                     </h2>
-                    <p className="forest:text-accent font-poppins">
-                      {project.desp}.
-                    </p>
+                    <p className="forest:text-accent ">{project.desp}.</p>
                     <div className="card-actions justify-end">
                       <button className="btn bg-primary text-white border-primary">
                         <a href={project.githubLink} target="_blank">
