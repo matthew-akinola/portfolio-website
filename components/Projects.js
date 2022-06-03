@@ -63,7 +63,6 @@ function Projects({ projectRef }) {
                   animate={animation}
                   custom={index}
                   whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
                   key={index}
                   className="card w-full md:glass bg-base-300 shadow-md image-full lg:my-0 my-11 shadow-neutral hover:opacity-100"
                 >
@@ -80,16 +79,25 @@ function Projects({ projectRef }) {
                     </h2>
                     <p className="forest:text-accent ">{project.desp}.</p>
                     <div className="card-actions justify-end">
-                      <button className="btn bg-primary text-white border-primary">
-                        <a href={project.githubLink} target="_blank">
-                          <img src={gitIcon.src} alt="" className="w-6" />
-                        </a>
-                      </button>
-                      <button className="btn bg-primary text-white border-primary">
-                        <a href={project.liveLink} target="_blank">
-                          <ExternalLinkIcon className="w-6" />
-                        </a>
-                      </button>
+                      =
+                      <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="btn bg-primary text-white border-primary"
+                        href={project.githubLink}
+                        target="_blank"
+                      >
+                        <img src={gitIcon.src} alt="" className="w-6" />
+                      </motion.a>
+                      <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="btn bg-primary text-white border-primary"
+                        href={project.liveLink}
+                        target="_blank"
+                      >
+                        <ExternalLinkIcon className="w-6" />
+                      </motion.a>
                     </div>
                   </div>
                 </motion.div>
