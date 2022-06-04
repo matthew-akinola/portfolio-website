@@ -54,7 +54,12 @@ function Hero({ heroRef, handleShade }) {
       <motion.svg
         className={"absolute w-20 a"}
         initial={{ opacity: 0, x: 0, y: 0 }}
-        animate={{ opacity: 1, x: [200, 150, 0], y: [0, -50, -100] }}
+        animate={{
+          opacity: 1,
+          x: [200, 150, 0],
+          y: [0, -50, -100],
+          scale: 1.1,
+        }}
         transition={{ duration: 5.8, delay: 2.5, yoyo: Infinity }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
