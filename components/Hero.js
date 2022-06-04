@@ -52,10 +52,10 @@ function Hero({ heroRef, handleShade }) {
       className=" my-10 flex  items-center justify-around min-h-[92vh] relative  hero "
     >
       <motion.svg
-        className={"absolute w-20"}
+        className={"absolute w-20 a"}
         initial={{ opacity: 0, x: 0, y: 0 }}
         animate={{ opacity: 1, x: [200, 150, 0], y: [0, -50, -100] }}
-        transition={{ duration: 6, delay: 2.5, yoyo: Infinity }}
+        transition={{ duration: 5.8, delay: 2.5, yoyo: Infinity }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         opacity=".3"
@@ -71,7 +71,7 @@ function Hero({ heroRef, handleShade }) {
         className={"absolute w-20"}
         initial={{ opacity: 0, x: 0, y: 0 }}
         animate={{ opacity: 1, x: [-200, -150, 0], y: [0, 50, 100] }}
-        transition={{ duration: 6, delay: 2.5, yoyo: Infinity }}
+        transition={{ duration: 5.8, delay: 2.5, yoyo: Infinity }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         opacity=".3"
