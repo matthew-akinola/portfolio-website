@@ -1,4 +1,9 @@
-import { motion, useAnimation } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useViewportScroll,
+  useTransform,
+} from "framer-motion";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Tilt from "react-tilt";
@@ -7,6 +12,8 @@ import Personal from "../images/ab.jpg";
 function About({ aboutRef }) {
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  const { scrollY } = useViewportScroll();
+  const y2 = useTransform(scrollY, [0, 400], [0, -200]);
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -21,12 +28,9 @@ function About({ aboutRef }) {
         },
       });
     }
-    if (!inView) {
-      animation.start({
-        opacity: 0,
-        x: "-100vw",
-      });
-    }
+    // if (!inView) {
+    //   animation.start();
+    // }
   }, [inView]);
   return (
     <div ref={aboutRef}>
@@ -35,7 +39,16 @@ function About({ aboutRef }) {
         className="flex  items-center justify-around min-h-[92vh]"
         id="about"
       >
-        <motion.div animate={animation} className="w-full mt-28">
+        <motion.div
+          style={{ y: y2 }}
+          initial={{
+            opacity: 0,
+            x: "-100vw",
+          }}
+          animate={animation}
+          exit={{ opacity: 0 }}
+          className="w-full mt-28"
+        >
           <div className="flex w-full  items-center justify-center px-4">
             {" "}
             <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl text-2xl">

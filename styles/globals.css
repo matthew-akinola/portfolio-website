@@ -38,6 +38,16 @@ h1 {
 
   letter-spacing: 10px;
 }
+.textContainer {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.word-wrapper {
+  white-space: nowrap;
+}
+.AppText {
+  text-align: center;
+}
 
 *::-webkit-scrollbar {
   background-color: transparent !important;

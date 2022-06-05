@@ -1,4 +1,9 @@
-import { motion, useAnimation } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -7,6 +12,8 @@ function Experience({ expRef }) {
   const [currentTab, setCurrentTab] = useState(1);
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  const { scrollY } = useViewportScroll();
+  const y2 = useTransform(scrollY, [0, 300], [0, -200]);
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -22,17 +29,22 @@ function Experience({ expRef }) {
       });
       console.log(inView);
     }
-    if (!inView) {
-      animation.start({
-        opacity: 0,
-        x: "-100vw",
-      });
-    }
   }, [inView]);
   return (
-    <div ref={ref}>
-      <div className="  min-h-[92vh] pt-24  mx-5 my-16" id="exp" ref={expRef}>
-        <motion.div animate={animation} className="my-9 relative">
+    <motion.div ref={ref}>
+      <motion.div
+        className="  min-h-[92vh] pt-24  mx-5 my-16"
+        id="exp"
+        ref={expRef}
+      >
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: "-100vw",
+          }}
+          animate={animation}
+          className="my-9 relative"
+        >
           <motion.svg
             className={"absolute w-20 left-96"}
             initial={{ opacity: 0, x: 0, y: 0 }}
@@ -220,8 +232,8 @@ function Experience({ expRef }) {
             </div>
           )}
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

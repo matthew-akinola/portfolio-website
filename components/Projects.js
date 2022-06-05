@@ -3,7 +3,13 @@ import projectData from "./data";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import gitIcon from "../svgs/github-4.svg";
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
+import FadeInWhenVisible from "./FadeInWhenVisible";
 
 const item = {
   hidden: {
@@ -17,6 +23,7 @@ const item = {
 function Projects({ projectRef }) {
   const { ref, inView } = useInView();
   const animation = useAnimation();
+
   useEffect(() => {
     if (inView) {
       animation.start((i) => ({
@@ -41,13 +48,7 @@ function Projects({ projectRef }) {
   }, [inView]);
   return (
     <div ref={ref}>
-      <motion.div
-        animate={animation}
-        custom={0}
-        className=" pt-24 mb-10"
-        id="project"
-        ref={projectRef}
-      >
+      <motion.div className=" pt-24 mb-10" id="project" ref={projectRef}>
         <div className="my-10">
           <div className="flex w-full items-center justify-center px-4">
             {" "}
@@ -56,54 +57,54 @@ function Projects({ projectRef }) {
             </h1>{" "}
             <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
-          <div className="grid lg:grid-cols-2 place-items-center  lg:gap-20 gap-5 mx-10 md:mx-20 my-10">
+          <motion.div className="grid lg:grid-cols-2 place-items-center  lg:gap-20 gap-5 mx-10 md:mx-20 my-10">
             {projectData.map((project, index) => {
               return (
-                <motion.div
-                  animate={animation}
-                  custom={index}
-                  whileHover={{ scale: 1.1 }}
-                  key={index}
-                  className="card w-full md:glass bg-base-300 shadow-md image-full lg:my-0 my-11 shadow-neutral hover:opacity-100"
-                >
-                  <figure className="bg-primary">
-                    <img
-                      src={project.image.src}
-                      className="hover:opacity-100 cursor-pointer transition-all duration-500"
-                      alt="Album"
-                    />
-                  </figure>
-                  <div className="card-body">
-                    <h2 className="card-title  text-xl text-primary ">
-                      {project.name}
-                    </h2>
-                    <p className="forest:text-accent ">{project.desp}.</p>
-                    <div className="card-actions justify-end">
-                      =
-                      <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="btn bg-primary text-white border-primary"
-                        href={project.githubLink}
-                        target="_blank"
-                      >
-                        <img src={gitIcon.src} alt="" className="w-6" />
-                      </motion.a>
-                      <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="btn bg-primary text-white border-primary"
-                        href={project.liveLink}
-                        target="_blank"
-                      >
-                        <ExternalLinkIcon className="w-6" />
-                      </motion.a>
+                <FadeInWhenVisible>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    key={index}
+                    className="card w-full md:glass bg-base-300 shadow-md image-full lg:my-0 my-11 shadow-neutral hover:opacity-100"
+                  >
+                    <figure className="bg-primary">
+                      <img
+                        src={project.image.src}
+                        className="hover:opacity-100 cursor-pointer transition-all duration-500"
+                        alt="Album"
+                      />
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title  text-xl text-primary ">
+                        {project.name}
+                      </h2>
+                      <p className="forest:text-accent ">{project.desp}.</p>
+                      <div className="card-actions justify-end">
+                        =
+                        <motion.a
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="btn bg-primary text-white border-primary"
+                          href={project.githubLink}
+                          target="_blank"
+                        >
+                          <img src={gitIcon.src} alt="" className="w-6" />
+                        </motion.a>
+                        <motion.a
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="btn bg-primary text-white border-primary"
+                          href={project.liveLink}
+                          target="_blank"
+                        >
+                          <ExternalLinkIcon className="w-6" />
+                        </motion.a>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </FadeInWhenVisible>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </div>

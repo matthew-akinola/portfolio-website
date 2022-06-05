@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import AnimatedText from "./AnimatedText";
 
 function Hero({ heroRef, handleShade }) {
   const { ref, inView } = useInView();
-
+  const { scrollY } = useViewportScroll();
+  const scale = useTransform(scrollY, [0, 300], [0, 200]);
+  const y2 = useTransform(scrollY, [0, 300], [0, -200]);
+  // const translate = useTransform(scrollY);
   useEffect(() => {
     if (!inView) {
       handleShade(true);
@@ -13,6 +17,28 @@ function Hero({ heroRef, handleShade }) {
       handleShade(false);
     }
   }, [inView]);
+  const [replay, setReplay] = useState(true);
+  // Placeholder text data, as if from API
+  const placeholderText = [{ type: "heading2", text: "Jeje Yanfunmi." }];
+  const placeholderText2 = [
+    { type: "paragraph", text: "I build things for the web." },
+  ];
+
+  const textContainer = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025,
+      },
+    },
+  };
+
+  // Quick and dirt for the example
+  const handleReplay = () => {
+    setReplay(!replay);
+    setTimeout(() => {
+      setReplay(true);
+    }, 1600);
+  };
   const container = {
     hidden: {
       opacity: 0,
@@ -42,6 +68,9 @@ function Hero({ heroRef, handleShade }) {
       },
     },
   };
+  useEffect(() => {
+    handleReplay();
+  }, []);
   return (
     <motion.div
       variants={container}
@@ -88,15 +117,31 @@ function Hero({ heroRef, handleShade }) {
           fill="#84CC16"
         />
       </motion.svg>
+
+      <motion.svg
+        style={{ y: y2, x: 200, scale: 1.1 }}
+        className={"absolute w-20"}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        opacity=".3"
+        fill="#84CC16"
+      >
+        <path
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+          opacity=".3"
+          fill="#84CC16"
+        />
+      </motion.svg>
+
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
       </svg> */}
-      <div className="md:mx-80 mx-40" ref={ref}>
-        <p className=" font-poppins ">
+      <div className="md:mx-80 sm:mx-10" ref={ref}>
+        <motion.p style={{ y: y2 }} className=" font-poppins md:px-0 px-16">
           <motion.span
-            variants={item}
+            variants={textContainer}
             initial="hidden"
-            animate="show"
+            animate={replay ? "visible" : "hidden"}
             className="text-primary font-poppins leading-5 font-bold "
           >
             Hi, my name is
@@ -104,22 +149,28 @@ function Hero({ heroRef, handleShade }) {
           <br />
           <br />
           <motion.span
-            variants={item}
+            variants={textContainer}
             initial="hidden"
-            animate="show"
+            animate={replay ? "visible" : "hidden"}
             className="md:text-6xl text-4xl text-primary font-extrabold font-sega"
           >
-            Jeje Yanfunmi.
+            <div className="textContainer">
+              {placeholderText.map((item, index) => {
+                return <AnimatedText {...item} key={index} />;
+              })}
+            </div>
           </motion.span>
           <br />
           <br className="hidden md:block" />
           <motion.span
-            variants={item}
+            variants={textContainer}
             initial="hidden"
-            animate="show"
-            className="font-extrabold md:text-6xl text-4xl text-orange-600 "
+            animate={replay ? "visible" : "hidden"}
+            className="font-extrabold md:text-6xl text-4xl textContainer text-orange-600 "
           >
-            I build things for the web.
+            {placeholderText2.map((item, index) => {
+              return <AnimatedText {...item} key={index} />;
+            })}
           </motion.span>
           <br />
           <br />
@@ -134,7 +185,7 @@ function Hero({ heroRef, handleShade }) {
             web applications. I'm currently learning blockchain development and
             building more projects.
           </motion.span>
-        </p>
+        </motion.p>
       </div>
     </motion.div>
   );
