@@ -7,7 +7,7 @@ function Hero({ heroRef, handleShade }) {
   const { ref, inView } = useInView();
   const { scrollY } = useViewportScroll();
   const scale = useTransform(scrollY, [0, 300], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -200]);
+  const y2 = useTransform(scrollY, [0, 700], [0, 800]);
   // const translate = useTransform(scrollY);
   useEffect(() => {
     if (!inView) {
@@ -119,7 +119,7 @@ function Hero({ heroRef, handleShade }) {
       </motion.svg>
 
       <motion.svg
-        style={{ y: y2, x: 200, scale: 1.1 }}
+        style={{ y: y2, x: 200, scale: 1.7 }}
         className={"absolute w-20"}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
