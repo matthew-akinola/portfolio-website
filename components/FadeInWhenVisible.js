@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 
-function FadeInWhenVisible({ children }) {
+function FadeInWhenVisible({ children, i }) {
   return (
     <motion.div
       initial="hidden"

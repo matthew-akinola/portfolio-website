@@ -40,7 +40,6 @@ function About({ aboutRef }) {
         id="about"
       >
         <motion.div
-          style={{ y: y2 }}
           initial={{
             opacity: 0,
             x: "-100vw",

@@ -137,7 +137,7 @@ function Hero({ heroRef, handleShade }) {
         <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
       </svg> */}
       <div className="md:mx-80 sm:mx-10" ref={ref}>
-        <motion.p style={{ y: y2 }} className=" font-poppins md:px-0 px-16">
+        <motion.p className=" font-poppins md:px-0 px-16">
           <motion.span
             variants={textContainer}
             initial="hidden"
