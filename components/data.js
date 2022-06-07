@@ -2,7 +2,15 @@ import movpic from "../images/jaymovies.jpg";
 import chatpic from "../images/jaychats.jpg";
 import kodepic from "../images/kodeschool.jpg";
 import slackpic from "../images/slackclone.png";
+import pexelspic from "../images/jaypexel.jpg";
 const projectData = [
+  {
+    name: "JAYpexel",
+    desp: "A site filled with free pictures and videos that can be download on the pexels main site. This was built with Next.js, Tailwind CSS, pexels Api, Framer motion.",
+    image: pexelspic,
+    liveLink: "https://jaypexel.vercel.app/",
+    githubLink: "https://github.com/Dubjay18/Kaypexel",
+  },
   {
     name: "JayMovies",
     desp: "A movie recommendation site, trailers of movies can also be viewed on clicking a movie's image. This was built with Next.js, Firebase, Tailwind CSS, TMDB Api",
