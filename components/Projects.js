@@ -61,19 +61,72 @@ function Projects({ projectRef }) {
             {projectData.map((project, index) => {
               return (
                 <FadeInWhenVisible>
+                  <div class="wrapper hidden md:block  bg-transparent antialiased text-gray-900">
+                    <div>
+                      <img
+                        src={project.image.src}
+                        alt=" random imgee"
+                        class="w-full object-cover object-center rounded-lg shadow-md hover:opacity-100 hover:z-40 cursor-pointer transition-all duration-500 bg-green opacity-75"
+                      />
+
+                      <div class="relative px-4 -mt-16  z-10">
+                        <div class="bg-primary p-6 rounded-lg shadow-lg">
+                          <div class="flex items-baseline"></div>
+
+                          <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+                            {project.name}
+                          </h4>
+
+                          <div class="mt-4">
+                            <span class="text-white text-md font-semibold">
+                              {" "}
+                              <p className="forest:text-accent ">
+                                {project.desp}.
+                              </p>
+                              <div className="card-actions justify-end">
+                                =
+                                <motion.a
+                                  whileHover={{ scale: 1.1 }}
+                                  whileTap={{ scale: 0.9 }}
+                                  className="btn bg-primary text-white border-primary"
+                                  href={project.githubLink}
+                                  target="_blank"
+                                >
+                                  <img
+                                    src={gitIcon.src}
+                                    alt=""
+                                    className="w-6"
+                                  />
+                                </motion.a>
+                                <motion.a
+                                  whileHover={{ scale: 1.1 }}
+                                  whileTap={{ scale: 0.9 }}
+                                  className="btn bg-primary text-white border-primary"
+                                  href={project.liveLink}
+                                  target="_blank"
+                                >
+                                  <ExternalLinkIcon className="w-6" />
+                                </motion.a>
+                              </div>{" "}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     key={index}
-                    className="card w-full md:glass bg-base-300 shadow-md image-full lg:my-0 my-11 shadow-neutral hover:opacity-100"
+                    className="card w-full md:glass bg-base-300 shadow-md image-full md:hidden lg:my-0 my-11 shadow-neutral hover:opacity-100"
                   >
-                    <figure className="bg-primary">
+                    <figure className="bg-primary md:hidden">
                       <img
                         src={project.image.src}
-                        className="hover:opacity-100 cursor-pointer transition-all duration-500"
+                        className="hover:opacity-100 cursor-pointer transition-all duration-500 md:hidden"
                         alt="Album"
                       />
                     </figure>
-                    <div className="card-body">
+                    <div className="card-body md:hidden">
                       <h2 className="card-title  text-xl text-primary ">
                         {project.name}
                       </h2>

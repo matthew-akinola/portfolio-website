@@ -9,7 +9,7 @@ const projectData = [
     desp: "A site filled with free pictures and videos that can be download on the pexels main site. This was built with Next.js, Tailwind CSS, pexels Api, Framer motion.",
     image: pexelspic,
     liveLink: "https://jaypexel.vercel.app/",
-    githubLink: "https://github.com/Dubjay18/Kaypexel",
+    githubLink: "https://github.com/Dubjay18/Jaypexel",
   },
   {
     name: "JayMovies",
