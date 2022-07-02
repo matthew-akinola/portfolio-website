@@ -33,10 +33,10 @@ function About({ aboutRef }) {
     // }
   }, [inView]);
   return (
-    <div ref={aboutRef}>
+    <div ref={aboutRef} className="hero -mt-10">
       <div
         ref={ref}
-        className="flex  items-center justify-around min-h-[92vh]"
+        className="flex  items-center justify-around min-h-[92vh] "
         id="about"
       >
         <motion.div
@@ -55,7 +55,7 @@ function About({ aboutRef }) {
             </h1>{" "}
             <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
-          <div className="flex flex-col-reverse md:grid grid-cols-7  my-8 md:pt-10 sec2__right">
+          <div className="flex flex-col-reverse md:grid grid-cols-7  my-8 md:pt-10 ">
             <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28  md:my-0 my-10 forest:text-white lemonade:text-accent md:px-0 px-5 font-poppins">
               Hello! My name is Yanfunmi, I am passionate about tech and i like
               building web apps. My interest in web development started back in

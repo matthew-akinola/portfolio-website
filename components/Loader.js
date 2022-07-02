@@ -39,11 +39,10 @@ const itemMain = {
   show: {
     opacity: 1,
     y: 0,
-    scale: [1.5, 1, 1.1, 1, 1.1],
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       delay: 0.2,
-      duration: 2.3,
+      duration: 1.3,
     },
   },
   exit: {

@@ -5,6 +5,7 @@ import AnimatedText from "./AnimatedText";
 
 function Hero({ heroRef, handleShade }) {
   const { ref, inView } = useInView();
+  const [loading, setLoading] = useState(true);
   const { scrollY } = useViewportScroll();
   const scale = useTransform(scrollY, [0, 300], [0, 200]);
   const y2 = useTransform(scrollY, [0, 700], [0, 800]);
@@ -19,7 +20,7 @@ function Hero({ heroRef, handleShade }) {
   }, [inView]);
   const [replay, setReplay] = useState(true);
   // Placeholder text data, as if from API
-  const placeholderText = [{ type: "heading2", text: "Jeje Yanfunmi." }];
+  const placeholderText = [{ type: "heading2", text: "Yanfunmi." }];
   const placeholderText2 = [
     { type: "paragraph", text: "I build things for the web." },
   ];
@@ -69,7 +70,12 @@ function Hero({ heroRef, handleShade }) {
     },
   };
   useEffect(() => {
-    handleReplay();
+    setTimeout(() => {
+      handleReplay();
+    }, 100);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
   }, []);
   return (
     <motion.div
@@ -78,7 +84,9 @@ function Hero({ heroRef, handleShade }) {
       animate="show"
       id="hero"
       ref={heroRef}
-      className=" my-10 flex  items-center justify-around min-h-[92vh] relative  hero "
+      className={`${
+        loading && "blur-sm"
+      }  my-10 py-10 min-h-[92vh] relative  hero`}
     >
       <motion.svg
         className={"absolute w-20 a"}
@@ -136,56 +144,59 @@ function Hero({ heroRef, handleShade }) {
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
       </svg> */}
-      <div className="md:mx-80 sm:mx-10" ref={ref}>
-        <motion.p className=" font-poppins md:px-0 px-16">
-          <motion.span
-            variants={textContainer}
-            initial="hidden"
-            animate={replay ? "visible" : "hidden"}
-            className="text-primary font-poppins leading-5 font-bold "
-          >
-            Hi, my name is
-          </motion.span>
-          <br />
-          <br />
-          <motion.span
-            variants={textContainer}
-            initial="hidden"
-            animate={replay ? "visible" : "hidden"}
-            className="md:text-6xl text-4xl text-primary font-extrabold font-sega"
-          >
-            <div className="textContainer">
-              {placeholderText.map((item, index) => {
+
+      <div className=" md:max-w-xl max-w-lg" ref={ref}>
+        <div className="hero-content">
+          <motion.p className=" font-poppins md:px-0 ">
+            <motion.span
+              variants={textContainer}
+              initial="hidden"
+              animate={replay ? "visible" : "hidden"}
+              className="text-primary font-poppins leading-5 font-bold "
+            >
+              Hi, my name is
+            </motion.span>
+            <br />
+            <br />
+            <motion.span
+              variants={textContainer}
+              initial="hidden"
+              animate={replay ? "visible" : "hidden"}
+              className="md:text-6xl text-4xl text-primary font-extrabold font-sega"
+            >
+              <div className="textContainer">
+                {placeholderText.map((item, index) => {
+                  return <AnimatedText {...item} key={index} />;
+                })}
+              </div>
+            </motion.span>
+            <br />
+
+            <motion.span
+              variants={textContainer}
+              initial="hidden"
+              animate={replay ? "visible" : "hidden"}
+              className="font-extrabold md:text-4xl text-2xl textContainer text-orange-600 "
+            >
+              {placeholderText2.map((item, index) => {
                 return <AnimatedText {...item} key={index} />;
               })}
-            </div>
-          </motion.span>
-          <br />
-          <br className="hidden md:block" />
-          <motion.span
-            variants={textContainer}
-            initial="hidden"
-            animate={replay ? "visible" : "hidden"}
-            className="font-extrabold md:text-6xl text-4xl textContainer text-orange-600 "
-          >
-            {placeholderText2.map((item, index) => {
-              return <AnimatedText {...item} key={index} />;
-            })}
-          </motion.span>
-          <br />
-          <br />
-          <br className="hidden md:block" />
-          <motion.span
-            variants={item}
-            initial="hidden"
-            animate="show"
-            className="justify-start forest:text-white lemonade:text-accent"
-          >
-            I'm a software engineer specilized in building top notch full-stack
-            web applications. I'm currently learning blockchain development and
-            building more projects.
-          </motion.span>
-        </motion.p>
+            </motion.span>
+            <br />
+
+            <br className="hidden md:block" />
+            <motion.span
+              variants={item}
+              initial="hidden"
+              animate="show"
+              className="justify-start forest:text-white lemonade:text-accent"
+            >
+              I'm a software engineer specilized in building top notch
+              full-stack web applications. I'm currently learning blockchain
+              development and building more projects.
+            </motion.span>
+          </motion.p>
+        </div>
       </div>
     </motion.div>
   );

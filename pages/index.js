@@ -12,7 +12,7 @@ import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
 import { useStateValue } from "../stateProvider";
 import headIcon from "../svgs/he2.svg";
-import ogIcon from "../svgs/logoj.svg";
+import ogIcon from "../images/OGimage.jpg";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [shade, setShade] = useState(false);
@@ -66,10 +66,14 @@ export default function Home() {
           href="https://fonts.googleapis.com/css?family=Poppins"
           rel="stylesheet"
         />
-        <meta property="og:title" content="Jay's portfolio" />
-        <meta property="og:description" content="Devjay the full-stack dev" />
+        <meta property="og:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta
+          property="og:description"
+          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+        />
 
-        <meta property="og:image" content={ogIcon} />
+        <meta property="og:image" content={ogIcon.src} />
+        <meta property="og:url" content={"https://jayfolio.vercel.app"} />
       </Head>
 
       <div className="cus-scroll">

@@ -10,6 +10,7 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import FadeInWhenVisible from "./FadeInWhenVisible";
+import Link from "next/link";
 
 const item = {
   hidden: {
@@ -48,7 +49,7 @@ function Projects({ projectRef }) {
   }, [inView]);
   return (
     <div ref={ref}>
-      <motion.div className=" pt-24 mb-10" id="project" ref={projectRef}>
+      <motion.div className=" pt-24 mb-10 -mt-14" id="project" ref={projectRef}>
         <div className="my-10">
           <div className="flex w-full items-center justify-center px-4">
             {" "}
@@ -80,33 +81,14 @@ function Projects({ projectRef }) {
                           <div class="mt-4">
                             <span class="text-white text-md font-semibold">
                               {" "}
-                              <p className="forest:text-accent ">
-                                {project.desp}.
-                              </p>
                               <div className="card-actions justify-end">
                                 =
-                                <motion.a
-                                  whileHover={{ scale: 1.1 }}
-                                  whileTap={{ scale: 0.9 }}
-                                  className="btn bg-primary text-white border-primary"
-                                  href={project.githubLink}
-                                  target="_blank"
-                                >
-                                  <img
-                                    src={gitIcon.src}
-                                    alt=""
-                                    className="w-6"
-                                  />
-                                </motion.a>
-                                <motion.a
-                                  whileHover={{ scale: 1.1 }}
-                                  whileTap={{ scale: 0.9 }}
-                                  className="btn bg-primary text-white border-primary"
-                                  href={project.liveLink}
-                                  target="_blank"
-                                >
-                                  <ExternalLinkIcon className="w-6" />
-                                </motion.a>
+                                <Link href={`/project/${index}`}>
+                                  <p className="text-center py-3 rounded-lg btn btn-accent font-bold ">
+                                    More Info{" "}
+                                    <ExternalLinkIcon className="w-6" />
+                                  </p>
+                                </Link>
                               </div>{" "}
                             </span>
                           </div>
@@ -130,27 +112,13 @@ function Projects({ projectRef }) {
                       <h2 className="card-title  text-xl text-primary ">
                         {project.name}
                       </h2>
-                      <p className="forest:text-accent ">{project.desp}.</p>
                       <div className="card-actions justify-end">
                         =
-                        <motion.a
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="btn bg-primary text-white border-primary"
-                          href={project.githubLink}
-                          target="_blank"
-                        >
-                          <img src={gitIcon.src} alt="" className="w-6" />
-                        </motion.a>
-                        <motion.a
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="btn bg-primary text-white border-primary"
-                          href={project.liveLink}
-                          target="_blank"
-                        >
-                          <ExternalLinkIcon className="w-6" />
-                        </motion.a>
+                        <Link href={`/project/${index}`}>
+                          <p className="text-center py-3 rounded-lg btn btn-accent font-bold ">
+                            More Info <ExternalLinkIcon className="w-6" />
+                          </p>
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
