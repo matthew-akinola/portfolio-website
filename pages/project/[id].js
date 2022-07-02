@@ -27,37 +27,37 @@ const project = () => {
         data-theme={darkmode ? "forest" : "lemonade"}
         className="h-[100vh] w-full flex justify-center items-center"
       >
-        <Head>
-          <title>Dev-Jay</title>
-          <link rel="icon" href={headIcon.src} sizes="16x16 32x32" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Poppins"
-            rel="stylesheet"
-          />
-          <meta
-            name="title"
-            property="og:title"
-            content="Jeje Yanfunmi- Dev-jay"
-          />
-          <meta
-            name="description"
-            property="og:description"
-            content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
-          />
-          <meta name="type" property="og:type" content="website" />
-          <meta
-            name="image"
-            property="og:image"
-            content={
-              "https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
-            }
-          />
-          <meta
-            name="url"
-            property="og:url"
-            content={"https://jayfolio.vercel.app"}
-          />
-        </Head>
+       <Head>
+        <title>Jeje Yanfunmi- Dev-jay</title>
+        <meta
+          name="description"
+          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+        />
+        <meta property="og:url" content="https://jayfolio.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta
+          property="og:description"
+          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="jayfolio.vercel.app" />
+        <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
+        <meta name="twitter:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta
+          name="twitter:description"
+          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+        />
+      </Head>
         {placeholderText.map((item, index) => {
           return <AnimatedText {...item} key={index} />;
         })}
@@ -69,35 +69,36 @@ const project = () => {
       data-theme={darkmode ? "forest" : "lemonade"}
       className="w-full min-h-[100vh] overflow-x-hidden"
     >
+
       <Head>
-        <title>Dev-Jay</title>
-        <link rel="icon" href={headIcon.src} sizes="16x16 32x32" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Poppins"
-          rel="stylesheet"
-        />
-        <meta
-          name="title"
-          property="og:title"
-          content="Jeje Yanfunmi- Dev-jay"
-        />
+        <title>Jeje Yanfunmi- Dev-jay</title>
         <meta
           name="description"
+          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+        />
+        <meta property="og:url" content="https://jayfolio.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta
           property="og:description"
           content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
         />
-        <meta name="type" property="og:type" content="website" />
         <meta
-          name="image"
           property="og:image"
-          content={
-            "https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
-          }
+          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="jayfolio.vercel.app" />
+        <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
+        <meta name="twitter:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta
+          name="twitter:description"
+          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
         />
         <meta
-          name="url"
-          property="og:url"
-          content={"https://jayfolio.vercel.app"}
+          name="twitter:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
         />
       </Head>
       <Navbar />
