@@ -34,19 +34,29 @@ const project = () => {
             href="https://fonts.googleapis.com/css?family=Poppins"
             rel="stylesheet"
           />
-          <meta property="og:title" content="Jeje Yanfunmi- Dev-jay" />
           <meta
+            name="title"
+            property="og:title"
+            content="Jeje Yanfunmi- Dev-jay"
+          />
+          <meta
+            name="description"
             property="og:description"
             content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
           />
-
+          <meta name="type" property="og:type" content="website" />
           <meta
+            name="image"
             property="og:image"
             content={
               "https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
             }
           />
-          <meta property="og:url" content={"https://jayfolio.vercel.app"} />
+          <meta
+            name="url"
+            property="og:url"
+            content={"https://jayfolio.vercel.app"}
+          />
         </Head>
         {placeholderText.map((item, index) => {
           return <AnimatedText {...item} key={index} />;
@@ -66,19 +76,29 @@ const project = () => {
           href="https://fonts.googleapis.com/css?family=Poppins"
           rel="stylesheet"
         />
-        <meta property="og:title" content="Jeje Yanfunmi- Dev-jay" />
         <meta
+          name="title"
+          property="og:title"
+          content="Jeje Yanfunmi- Dev-jay"
+        />
+        <meta
+          name="description"
           property="og:description"
           content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
         />
-
+        <meta name="type" property="og:type" content="website" />
         <meta
+          name="image"
           property="og:image"
           content={
             "https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
           }
         />
-        <meta property="og:url" content={"https://jayfolio.vercel.app"} />
+        <meta
+          name="url"
+          property="og:url"
+          content={"https://jayfolio.vercel.app"}
+        />
       </Head>
       <Navbar />
       <div className="w-screen h-[50vh] relative">
