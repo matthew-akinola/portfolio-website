@@ -33,7 +33,7 @@ function Experience({ expRef }) {
   return (
     <motion.div ref={ref}>
       <motion.div
-        className="hero  min-h-[92vh] pt-24 -mt-2  mx-5 my-16"
+        className=" min-h-[92vh] pt-24   mx-5 my-16"
         id="exp"
         ref={expRef}
       >

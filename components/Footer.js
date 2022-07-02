@@ -9,7 +9,7 @@ function Footer() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="footer items-center p-4 dark:bg-transparent text-neutral-content hero -mt-12 border-t-2 border-primary"
+      className="footer items-center p-4 dark:bg-transparent text-neutral-content   border-t-2 border-primary"
     >
       <div className="items-center grid-flow-col">
         <svg

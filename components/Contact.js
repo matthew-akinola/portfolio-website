@@ -72,7 +72,7 @@ function Contact({ contactRef, AlertDismissible }) {
     <div ref={ref}>
       <motion.div
         animate={animation}
-        className=" h-fit pt-44 mb-12 hero -mt-10"
+        className=" h-fit pt-44 mb-12 "
         ref={contactRef}
       >
         <div className="mx-8">
