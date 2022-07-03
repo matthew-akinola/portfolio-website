@@ -82,7 +82,7 @@ function Projects({ projectRef }) {
                             <span class="text-white text-md font-semibold">
                               {" "}
                               <div className="card-actions justify-end">
-                                =
+                                
                                 <Link href={`/project/${index}`}>
                                   <p className="text-center py-3 rounded-lg btn btn-accent font-bold ">
                                     More Info{" "}

@@ -59,19 +59,18 @@ export default function Home() {
       data-theme={darkmode ? "forest" : "lemonade"}
       className={" overflow-hidden bg-base-100"}
     >
-    
-    <Head>
-        <title>Jeje Yanfunmi- Dev-jay</title>
+      <Head>
+        <title>Dev-jay</title>
         <meta
           name="description"
-          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+          content="Jeje Yanfunmi - Dev-jay is an experienced full-stack developer that eats and breaths React js."
         />
         <meta property="og:url" content="https://jayfolio.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta property="og:title" content="Dev-jay" />
         <meta
           property="og:description"
-          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+          content="Jeje Yanfunmi - Dev-jay is an experienced full-stack developer that eats and breaths React js."
         />
         <meta
           property="og:image"
@@ -81,10 +80,10 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="jayfolio.vercel.app" />
         <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
-        <meta name="twitter:title" content="Jeje Yanfunmi- Dev-jay" />
+        <meta name="twitter:title" content="Dev-jay" />
         <meta
           name="twitter:description"
-          content="Jeje Yanfunmi - Dev-jay is and experienced full-stack developer that eats and breaths React js."
+          content="Jeje Yanfunmi - Dev-jay is an experienced full-stack developer that eats and breaths React js."
         />
         <meta
           name="twitter:image"
@@ -114,11 +113,7 @@ export default function Home() {
                 <About refScroll={refScroll} aboutRef={aboutRef} />
                 <Experience refScroll={refScroll} expRef={expRef} />
                 <Projects refScroll={refScroll} projectRef={projectRef} />
-                <Contact
-                  refScroll={refScroll}
-                  contactRef={contactRef}
-                  AlertDismissible={AlertDismissible}
-                />
+
                 <Footer />
               </>
             )}

@@ -6,13 +6,36 @@ import "react-toastify/dist/ReactToastify.css";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
-function Contact({ contactRef, AlertDismissible }) {
+function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  async function AlertDismissible(words, error) {
+    if (!error) {
+      toast.success(words, {
+        position: "top-right",
+        autoClose: 1400,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.error(words, {
+        position: "top-right",
+        autoClose: 1400,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -70,19 +93,15 @@ function Contact({ contactRef, AlertDismissible }) {
   };
   return (
     <div ref={ref}>
-      <motion.div
-        animate={animation}
-        className=" h-fit pt-44 mb-12 "
-        ref={contactRef}
-      >
+      <motion.div animate={animation} className=" h-fit pt-20 mb-12 ">
         <div className="mx-8">
           {" "}
           <div className="flex w-full items-center justify-center mx-7">
             {" "}
-            <h1 className="prose prose-lg text-primary font-bold md:text-6xl xs:text-4xl  text-2xl">
+            <h1 className="prose prose-lg text-primary font-bold  md:text-5xl xs:text-4xl  text-2xl">
               Get in Touch
             </h1>{" "}
-            <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
+            <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary md:block hidden" />
           </div>
           <div className="flex w-full items-center justify-center my-10">
             <form className="w-full mx-10 font-poppins" onSubmit={submit}>
@@ -92,7 +111,7 @@ function Contact({ contactRef, AlertDismissible }) {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="input input-bordered border-primary w-full max-w-xl  input-lg shadow-md bg-base-200"
+                  className="input input-bordered border-primary w-full max-w-xl  input-md shadow-md bg-base-200"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -102,7 +121,7 @@ function Contact({ contactRef, AlertDismissible }) {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="input input-bordered border-primary w-full max-w-xl input-lg   shadow-md bg-base-200"
+                  className="input input-bordered border-primary w-full max-w-xl input-md   shadow-md bg-base-200"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -114,7 +133,7 @@ function Contact({ contactRef, AlertDismissible }) {
                   rows="10"
                   placeholder="Your message"
                   value={message}
-                  className=" border-primary  md:w-2/3 mx-2  textarea placeholder:text-lg  bg-base-200 shadow-md"
+                  className=" border-primary  md:w-full mx-2  textarea placeholder:text-lg  bg-base-200 shadow-md"
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>

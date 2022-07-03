@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedText from "./AnimatedText";
+import { SocialIcon } from "react-social-icons";
 
 function Hero({ heroRef, handleShade }) {
   const { ref, inView } = useInView();
@@ -184,16 +185,41 @@ function Hero({ heroRef, handleShade }) {
             </motion.span>
             <br />
 
-            <br className="hidden md:block" />
             <motion.span
               variants={item}
               initial="hidden"
               animate="show"
               className="justify-start forest:text-white lemonade:text-accent"
             >
-              I'm a software engineer specilized in building top notch
-              full-stack web applications. I'm currently learning blockchain
+              I'm a Full-stack developer(Frontend heavy) specilized in building top notch
+              applications for the web. I'm currently learning blockchain
               development and building more projects.
+              <span className="flex items-center justify-evenly mt-2">
+                <div>
+                  <SocialIcon
+                    url="https://github.com/Dubjay18/"
+                    fgColor="green"
+                    bgColor="transparent"
+                    className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500 w-5"
+                  />
+                </div>
+                <div>
+                  <SocialIcon
+                    url="https://www.linkedin.com/in/oluwayanfunmi-jeje-a023b2210/"
+                    fgColor="green"
+                    bgColor="transparent"
+                    className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500"
+                  />
+                </div>
+                <div>
+                  <SocialIcon
+                    url="https://twitter.com/@YanfunmiJ"
+                    fgColor="green"
+                    bgColor="transparent"
+                    className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500"
+                  />
+                </div>
+              </span>
             </motion.span>
           </motion.p>
         </div>
