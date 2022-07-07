@@ -40,7 +40,7 @@ const projectData = [
     ],
   },
   {
-    name: "JayTodo",
+    name: "JayGym",
     desp: "A Website that displays alot of exercises. The site has search functionality which helps uses search through the large number of exercises, it also has links to youtube videos for the exercises selected to give the user better understanding.",
     image: Gym,
     liveLink: "https://jay-gym.vercel.app/",
