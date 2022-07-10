@@ -3,7 +3,13 @@ import reducer, { initialState } from "./../reducer";
 import "../styles/globals.css";
 import Head from "next/head";
 
+import dynamic from "next/dynamic";
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 function MyApp({ Component, pageProps }) {
+  const cursorColor = "135, 206,91";
+  const cursorColorInHex = "#87ce5b";
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
       <Head>
@@ -37,6 +43,30 @@ function MyApp({ Component, pageProps }) {
           content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
         />
       </Head>
+      <AnimatedCursor
+        color={cursorColor}
+        innerSize={8}
+        outerSize={35}
+        innerScale={1}
+        outerScale={1.7}
+        outerAlpha={0}
+        outerStyle={{
+          border: `3px solid #87ce5b`,
+        }}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
       <Component {...pageProps} />
     </StateProvider>
   );
