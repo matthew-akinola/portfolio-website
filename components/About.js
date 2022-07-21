@@ -33,19 +33,19 @@ function About({ aboutRef }) {
     // }
   }, [inView]);
   return (
-    <div ref={aboutRef} className="hero -mt-10">
+    <div
+      ref={aboutRef}
+      className="bg-base-300 shadow text-base-content about -mt-10 relative"
+    >
       <div
         ref={ref}
         className="flex  items-center justify-around min-h-[92vh] "
         id="about"
       >
         <motion.div
-          initial={{
-            opacity: 0,
-            x: "-100vw",
-          }}
-          animate={animation}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, y: -40, x: -40 }}
+          whileInView={{ opacity: 1, y: 0, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="w-full mt-28"
         >
           <div className="flex w-full  items-center justify-center px-4">
@@ -56,7 +56,7 @@ function About({ aboutRef }) {
             <hr className="w-24 mx-5 border-t-4 rounded-md border-secondary" />
           </div>
           <div className="flex flex-col-reverse md:grid grid-cols-7  my-8 md:pt-10 ">
-            <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28  md:my-0 my-10 forest:text-white lemonade:text-accent md:px-0 px-5 font-poppins">
+            <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28  md:my-0 my-10  md:px-0 px-5 ">
               Hello! My name is Yanfunmi, I am passionate about tech and i like
               building web apps. My interest in web development started back in
               2021. I'm a good problem solver, a chess player and a hard working
@@ -87,8 +87,8 @@ function About({ aboutRef }) {
                 </ul>
               </div>
             </p>
-            <div className="col-span-7 md:col-span-3 flex flex-col items-center justify-start">
-              <Tilt className="w-fit border-2 border-primary bg-primary h-fit rounded-lg">
+            <div className="col-span-7 md:col-span-3 flex flex-col items-center justify-start sec2__right">
+              <Tilt className="w-fit border-2 border-primary bg-primary h-fit rounded-lg  ">
                 <motion.img
                   animate={{ translateX: -4, translateY: -4 }}
                   src={Personal.src}
@@ -101,6 +101,7 @@ function About({ aboutRef }) {
           </div>
         </motion.div>
       </div>
+      <div id="tosHeader" className="bg-primary "></div>
     </div>
   );
 }

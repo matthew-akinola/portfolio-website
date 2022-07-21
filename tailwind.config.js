@@ -16,5 +16,10 @@ module.exports = {
   daisyui: {
     themes: ["night", "forest", "halloween", "dark", "cupcake", "lemonade"],
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    require("tailwind-scrollbar"),
+  ],
+  
 };

@@ -49,7 +49,12 @@ function Projects({ projectRef }) {
   }, [inView]);
   return (
     <div ref={ref}>
-      <motion.div className=" pt-24 mb-10 -mt-14" id="project" ref={projectRef}>
+      <motion.div
+        className=" pt-24 mb-10 -mt-14 relative"
+        id="project"
+        ref={projectRef}
+      >
+        <div id="tosHeader" className="bg-primary "></div>
         <div className="my-10">
           <div className="flex w-full items-center justify-center px-4">
             {" "}
@@ -82,7 +87,6 @@ function Projects({ projectRef }) {
                             <span class="text-white text-md font-semibold">
                               {" "}
                               <div className="card-actions justify-end">
-                                
                                 <Link href={`/project/${index}`}>
                                   <p className="text-center py-3 rounded-lg btn btn-accent font-bold ">
                                     More Info{" "}

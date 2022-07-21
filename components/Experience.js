@@ -31,18 +31,17 @@ function Experience({ expRef }) {
     }
   }, [inView]);
   return (
-    <motion.div ref={ref}>
+    <motion.div ref={ref} className="relative">
+    
       <motion.div
         className=" min-h-[92vh] pt-24   mx-5 my-16"
         id="exp"
         ref={expRef}
       >
         <motion.div
-          initial={{
-            opacity: 0,
-            x: "-100vw",
-          }}
-          animate={animation}
+          initial={{ opacity: 0, y: 0, x: -40 }}
+          whileInView={{ opacity: 1, y: 0, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="my-9 relative"
         >
           <motion.svg
