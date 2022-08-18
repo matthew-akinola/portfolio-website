@@ -21,7 +21,7 @@ function Hero({ heroRef, handleShade }) {
   }, [inView]);
   const [replay, setReplay] = useState(true);
   // Placeholder text data, as if from API
-  const placeholderText = [{ type: "heading2", text: "Yanfunmi." }];
+  const placeholderText = [{ type: "heading2", text: "Matthew." }];
   const placeholderText2 = [
     { type: "paragraph", text: "I build things for the web." },
   ];
@@ -191,13 +191,13 @@ function Hero({ heroRef, handleShade }) {
               animate="show"
               className="justify-start forest:text-white lemonade:text-accent"
             >
-              I'm a Full-stack developer(Frontend heavy) specilized in building top notch
-              applications for the web. I'm currently learning blockchain
-              development and building more projects.
+              I am a backend developer with a passion for developing and improving
+              highly-scalable databases for large applications and software, learning new
+              programming languages and developing innovative applications.
               <span className="flex items-center justify-evenly mt-2">
                 <div>
                   <SocialIcon
-                    url="https://github.com/Dubjay18/"
+                    url="https://github.com/matthew-akinola/"
                     fgColor="green"
                     bgColor="transparent"
                     className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500 w-5"
@@ -205,7 +205,7 @@ function Hero({ heroRef, handleShade }) {
                 </div>
                 <div>
                   <SocialIcon
-                    url="https://www.linkedin.com/in/oluwayanfunmi-jeje-a023b2210/"
+                    url="https://www.linkedin.com/in/akinola-matthew-8b47b8233/"                    
                     fgColor="green"
                     bgColor="transparent"
                     className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500"
@@ -213,7 +213,7 @@ function Hero({ heroRef, handleShade }) {
                 </div>
                 <div>
                   <SocialIcon
-                    url="https://twitter.com/@YanfunmiJ"
+                    url="https://twitter.com/AkinolaMatthe11"
                     fgColor="green"
                     bgColor="transparent"
                     className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500"

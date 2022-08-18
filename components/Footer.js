@@ -28,25 +28,25 @@ function Footer() {
           target="_blank"
           className="text-neutral-content font-poppins"
         >
-          Built by Jeje Yanfunmi
+          Built by Matthew Akinola
         </a>
       </div>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <div>
           <SocialIcon
-            url="https://github.com/Dubjay18/"
+            url="https://github.com/matthew-akinola/"
             fgColor="white"
             bgColor="black"
           />
         </div>
         <div>
           <SocialIcon
-            url="https://www.linkedin.com/in/oluwayanfunmi-jeje-a023b2210/"
+            url="https://www.linkedin.com/in/matthew-akinola/"
             fgColor="white"
           />
         </div>
         <div>
-          <SocialIcon url="https://twitter.com/@YanfunmiJ" fgColor="white" />
+          <SocialIcon url="https://twitter.com/AkinolaMatthe11" fgColor="white" />
         </div>
       </div>
     </motion.footer>

@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
       <Head>
-        <title>Dev-jay</title>
+        <title>Dev-Matt</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -34,14 +34,14 @@ function MyApp({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta
           name="description"
-          content="Jeje Yanfunmi - Dev-jay is an experienced full-stack developer that eats and breaths React js."
+          content="Akinola Matthew - Dev-matt is an experienced backend developer that eats and breaths Python."
         />
         <meta property="og:url" content="https://jayfolio.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dev-jay" />
+        <meta property="og:title" content="Dev-matt" />
         <meta
           property="og:description"
-          content="Jeje Yanfunmi - Dev-jay is an experienced full-stack developer that eats and breaths React js."
+          content="Akinola Matthew - Dev-matt is an experienced backend developer that eats and breaths Python."
         />
         <meta
           property="og:image"
@@ -51,10 +51,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="jayfolio.vercel.app" />
         <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
-        <meta name="twitter:title" content="Dev-jay" />
+        <meta name="twitter:title" content="Dev-matt" />
         <meta
           name="twitter:description"
-          content="Jeje Yanfunmi - Dev-jay is an experienced full-stack developer that eats and breaths React js."
+          content="Akinola Matthew - Dev-matt is an experienced backend developer that eats and breaths Python."
         />
         <meta
           name="twitter:image"

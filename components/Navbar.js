@@ -106,7 +106,7 @@ function Navbar({
                 className="group-hover:animate-bounce"
                 transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
               />
-              JAYFOLIO
+              MATFOLIO
             </a>
           </Link>
           <div> </div>
@@ -176,7 +176,7 @@ function Navbar({
             <div>
               <div className="flex w-full items-center justify-between">
                 <Link href="/">
-                  <a>JAYFOLIO</a>
+                  <a>MATFOLIO</a>
                 </Link>
                 <div
                   onClick={handleNav}
@@ -348,7 +348,7 @@ function Navbar({
                   className="group-hover:animate-bounce"
                   transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
                 />
-                JAYFOLIO
+                MATFOLIO
               </a>
             </Link>
           ) : (
@@ -364,7 +364,7 @@ function Navbar({
                 className="group-hover:animate-bounce"
                 transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
               />
-              <span>JAYFOLIO</span>
+              <span>MATFOLIO</span>
             </a>
           )}
         </div>

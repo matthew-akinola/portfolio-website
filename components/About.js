@@ -8,7 +8,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import Tilt from "react-tilt";
 import { useInView } from "react-intersection-observer";
-import Personal from "../images/ab.jpg";
+import Personal from "../images/ab.jpeg";
 function About({ aboutRef }) {
   const { ref, inView } = useInView();
   const animation = useAnimation();
@@ -57,14 +57,9 @@ function About({ aboutRef }) {
           </div>
           <div className="flex flex-col-reverse md:grid grid-cols-7  my-8 md:pt-10 ">
             <p className="col-span-7 md:col-span-4 md:mx-16 lg:mx-28  md:my-0 my-10  md:px-0 px-5 ">
-              Hello! My name is Yanfunmi, I am passionate about tech and i like
-              building web apps. My interest in web development started back in
-              2021. I'm a good problem solver, a chess player and a hard working
-              person.
-              <br />
-              I'm currently a Computer science student at Obafemi Awolowo
-              University, ile-ife.
-              <br />
+              Hello! My name is Matthew, I am a backend developer with a passion for developing 
+              and improving highly-scalable databases for large applications and software, 
+              learning new programming languages and developing innovative applications.
               <br />
               <span>
                 {" "}
@@ -73,16 +68,24 @@ function About({ aboutRef }) {
               <div className="exp">
                 <ul>
                   <span className="flex flex-wrap justify-between items-center  w-4/5 py-3">
-                    <li>React Js</li>
-                    <li>Firebase</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
                   </span>
                   <span className="flex flex-wrap justify-between items-center w-4/5 py-3">
-                    <li>Tailwind CSS</li>
-                    <li>Next js</li>
+                    <li>Django</li>
+                    <li>Fastapi</li>
                   </span>
                   <span className="flex flex-wrap justify-between items-center w-4/5 py-3">
-                    <li>Node js</li>
+                    <li>Flask</li>
                     <li>Mongo DB</li>
+                  </span>
+                  <span className="flex flex-wrap justify-between items-center w-4/5 py-3">
+                    <li>Postgresql</li>
+                    <li>Git</li>
+                  </span>
+                  <span className="flex flex-wrap justify-between items-center w-4/5 py-3">
+                    <li>Redis</li>
+                    <li>AWS</li>
                   </span>
                 </ul>
               </div>

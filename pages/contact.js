@@ -19,17 +19,17 @@ function ContactPage() {
               <span>
                 <a
                   className="link link-primary"
-                  href="mailto:Jejeniyi7@gmail.com"
+                  href="mailto:akinolatolulope24@gmail.com"
                 >
-                  Jejeniyi7@gmail.com
+                  Akinolatolulope24@gmail.com
                 </a>
               </span>
             </h2>
             <h2 className="my-10">
               PhoneNumber:{" "}
               <span>
-                <a className="link link-primary" href="tel:+2349130860401">
-                  +2349130860401
+                <a className="link link-primary" href="tel:+2348138309698">
+                  +2348138309698
                 </a>
               </span>
             </h2>

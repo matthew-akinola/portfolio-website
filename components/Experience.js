@@ -126,7 +126,7 @@ function Experience({ expRef }) {
                 }`}
                 onClick={() => setCurrentTab(1)}
               >
-                HNG
+                KodeCamp
               </a>
               <a
                 className={`tab tab-lg hover:bg-base-300 transition-all duration-500 forest:text-white lemonade:text-accent tab-bordered ${
@@ -136,7 +136,7 @@ function Experience({ expRef }) {
                 }`}
                 onClick={() => setCurrentTab(2)}
               >
-                KodeCamp
+                HNG
               </a>
               <a
                 className={`tab tab-lg hover:bg-base-300 transition-all duration-500 forest:text-white lemonade:text-accent tab-bordered ${
@@ -146,7 +146,7 @@ function Experience({ expRef }) {
                 }`}
                 onClick={() => setCurrentTab(3)}
               >
-                ALX
+                Zuri
               </a>
             </div>
           </div>
@@ -154,23 +154,22 @@ function Experience({ expRef }) {
             <div className="flex w-full justify-center">
               <div className="mx-10 md:mx-28 lg:mx-80">
                 <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
-                  Frontend Developer{" "}
+                  Fastapi Developer{" "}
                   <span className="text-lime-400 underline decoration-dashed">
-                    @HNGi8
+                    @KodeCamp
                   </span>
                 </h2>
-                <p className="my-5 font-poppins">Internship</p>
-                <p className="my-5 font-poppins">August 2021 - Oct 2021</p>
+                <p className="my-5 font-poppins">Internship(Remote)</p>
+                <p className="my-5 font-poppins">Apr 2022 - July 2022</p>
                 <div className="exp w-fit  forest:text-white lemonade:text-accent  font-poppins">
                   <ul>
                     <li className="">
-                      Worked with a large team of developers to build the
-                      company files plugin of a "Slack-like" app called
-                      Zuri-chat.
+                      Worked with developers to build a learning managment
+                      system for kodecamp
                     </li>
                     <li>
-                      Worked with a variety of tools Javascript React js, Next
-                      js, SPA, Node js.
+                      Built a variety of scalable APIs using, Python, Fastapi,
+                      AWS, Docker.
                     </li>
                   </ul>
                 </div>
@@ -181,49 +180,53 @@ function Experience({ expRef }) {
             <div className="flex w-full justify-center">
               <div className="mx-10 md:mx-28 lg:mx-80">
                 <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
-                  React Js Developer{" "}
+                  Backend Developer{" "}
                   <span className="text-lime-400 underline decoration-dashed">
-                    @KodeCamp
+                    @HNGi8
                   </span>
                 </h2>
-                <p className="my-5 font-poppins">Internship(Remote)</p>
-                <p className="my-5 font-poppins">August 2021 - Dec 2021</p>
-                <p className="my-5 font-poppins">Mar 2022 - Present</p>
+                <p className="my-5 font-poppins">Internship</p>
+                <p className="my-5 font-poppins">August 2021 - Oct 2021</p>
                 <div className="exp w-fit  forest:text-white lemonade:text-accent  font-poppins">
                   <ul>
                     <li className="">
-                      Worked with developers to build a learning managment
-                      system for kodecamp
+                      Worked with a large team of developers to build the
+                      company's channels plugin of a "Slack-like" app called
+                      Zuri-chat.
+                      Conducted testing and validation to ensure APIs performance match
+                      it intended outcome
+
                     </li>
                     <li>
-                      Built a variety of web apps with Apis, Javascript, Html,
-                      React js, Firebase.
+                      Worked with a variety of tools: Python, Django
+                      REST, Swagger, Redis.
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           )}
+          
           {currentTab === 3 && (
             <div className="flex w-full justify-center">
               <div className="mx-10 md:mx-28 lg:mx-80">
                 <h2 className="font-poppins md:text-2xl text-secondary  font-medium">
-                  Software Engineer{" "}
+                  Backend Developer{" "}
                   <span className="text-lime-400 underline decoration-dashed">
-                    @alx_africa
+                    @Zuri
                   </span>
                 </h2>
-                <p className="my-2 font-poppins">Internship</p>
-                <p className="my-2 font-poppins">Feb 2022 - Present</p>
+                <p className="my-5 font-poppins">Internship</p>
+                <p className="my-5 font-poppins">Jan 2021 - April 2021</p>
                 <div className="exp w-fit  forest:text-white lemonade:text-accent  font-poppins">
                   <ul>
                     <li className="">
-                      Learnt how to write C programs, Bash scripts, Python
-                      programs.
+                      Worked with a team of developers to build an application that helps 
+                      in peer to peer money transfer, withdrawal of funds and electric bills payment.
                     </li>
                     <li>
-                      Worked with other developers on Software engineering
-                      projects
+                      Worked with a variety of tools: Python, Django
+                      REST, Swagger, Flutterwave.
                     </li>
                   </ul>
                 </div>
