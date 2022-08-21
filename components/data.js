@@ -1,5 +1,5 @@
 import movpic from "../images/jaymovies.png";
-import pexelspic from "../images/jaypexel.png";
+import pexelspic from "../images/jaypexel.PNG";
 const projectData = [
   {
     name: "House Free",
