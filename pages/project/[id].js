@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useStateValue } from "../../stateProvider";
 import headIcon from "../../svgs/he2.svg";
-import ogIcon from "../../images/OGimage.jpg";
+import ogIcon from "../../images/OGimage.png";
 import Navbar from "../../components/Navbar";
 import AnimatedText from "../../components/AnimatedText";
 import { useState } from "react";

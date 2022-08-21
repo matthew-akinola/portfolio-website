@@ -25,7 +25,7 @@ const projectData = [
   },
   {
     name: "Help-meet",
-    desp: "A mobile application connects Estate Residents and Estate Admin together. A user can call for help in case of fire outbreak, health emergency, and robbery by switching on the notification button which will notify both other residents and Estate-admin",
+    desp: "A mobile application that connects Estate Residents and Estate Admin together. A user can call for help in case of fire outbreak, health emergency, and robbery by switching on the notification button which will notify both other residents and Estate-admin",
     image: movpic,
     liveLink: "https://help-meet.herokuapp.com/api/v1/docs/",
     githubLink: "https://github.com/matthew-akinola/help-meet-Django-",
@@ -44,7 +44,7 @@ const projectData = [
   },
   {
     name: "Help-meet",
-    desp: "A mobile application connects Estate Residents and Estate Admin together. A user can call for help in case of fire outbreak, health emergency, and robbery by switching on the notification button which will notify both other residents and Estate-admin",
+    desp: "A mobile application that connects Estate Residents and Estate Admin together. A user can call for help in case of fire outbreak, health emergency, and robbery by switching on the notification button which will notify both other residents and Estate-admin",
     image: movpic,
     liveLink: "https://spokane.herokuapp.com/",
     githubLink: "https://github.com/matthew-akinola/Fast-api-Helpmeet",

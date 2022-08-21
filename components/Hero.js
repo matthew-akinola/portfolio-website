@@ -205,7 +205,7 @@ function Hero({ heroRef, handleShade }) {
                 </div>
                 <div>
                   <SocialIcon
-                    url="https://www.linkedin.com/in/akinola-matthew-8b47b8233/"                    
+                    url="https://www.linkedin.com/in/matthew-akinola/"                    
                     fgColor="green"
                     bgColor="transparent"
                     className="hover:scale-125 shadow-primary  transition-all shadow-md rounded-lg duration-500"
