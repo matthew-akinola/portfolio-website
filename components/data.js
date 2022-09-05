@@ -1,5 +1,6 @@
 import pexelspic from "../images/jaypexel.png";
 import movpic from "../images/jaymovies.png";
+import helpline from "../images/customer-care.PNG";
 
 const projectData = [
   {
@@ -44,21 +45,20 @@ const projectData = [
     ],
   },
   {
-    name: "Help-meet",
-    desp: "A mobile application that connects Estate Residents and Estate Admin together. A user can call for help in case of fire outbreak, health emergency, and robbery by switching on the notification button which will notify both other residents and Estate-admin",
-    image: movpic,
-    liveLink: "https://spokane.herokuapp.com/",
-    githubLink: "https://github.com/matthew-akinola/Fast-api-Helpmeet",
+    name: "Customer-care line provider",
+    desp: "A web application that provides a user with a company's available customer care line based on the user's geolocation and if none exist, provides the contact-us form",
+    image: helpline,
+    liveLink: "https://customer-care-line-production.up.railway.app/home/",
+    githubLink: "https://github.com/matthew-akinola/customer-care-line",
     tech: "Fastapi",
     technologies: [
       "Python",
-      "Fastapi",
-      "Docker",
-      "Socketio",
-      "Swagger docs",
-      "Heroku",
-      "Git",
-      "Fastmail"
+      "Django",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Git"
+
     ],
   },
 ];
