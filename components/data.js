@@ -48,7 +48,7 @@ const projectData = [
     name: "Customer-care line provider",
     desp: "A web application that provides a user with a company's available customer care line based on the user's geolocation and if none exist, provides the contact-us form",
     image: helpline,
-    liveLink: "https://customer-care-line-production.up.railway.app/home/",
+    liveLink: "https://customer-care-line-production.up.railway.app/",
     githubLink: "https://github.com/matthew-akinola/customer-care-line",
     tech: "Fastapi",
     technologies: [
