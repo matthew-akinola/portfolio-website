@@ -1,4 +1,4 @@
-import pexelspic from "../images/jaypexel.png";
+import pexelspic from "../images/apartment.png";
 import movpic from "../images/jaymovies.png";
 import helpline from "../images/customer-care.PNG";
 
