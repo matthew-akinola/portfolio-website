@@ -87,7 +87,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+          content="https://res.cloudinary.com/housefree/image/upload/v1662636342/OGimage_czllew.png"
         />
       </Head>
       <div className="cus-scroll">
