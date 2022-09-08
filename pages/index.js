@@ -74,7 +74,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+          content="https://res.cloudinary.com/housefree/image/upload/v1662636342/OGimage_czllew.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
