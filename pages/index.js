@@ -65,7 +65,7 @@ export default function Home() {
           name="description"
           content="Akinola Matthew - Dev-matt is an experienced backend developer that eats and breaths Python."
         />
-        <meta property="og:url" content="https://jayfolio.vercel.app/" />
+        <meta property="og:url" content="https://portfolio-website-black-ten.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Dev-matt" />
         <meta
@@ -78,8 +78,8 @@ export default function Home() {
         />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="jayfolio.vercel.app" />
-        <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
+        <meta property="twitter:domain" content="black-ten.vercel.app" />
+        <meta property="twitter:url" content="https://portfolio-website-black-ten.vercel.app/" />
         <meta name="twitter:title" content="Dev-matt" />
         <meta
           name="twitter:description"

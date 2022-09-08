@@ -33,7 +33,7 @@ const project = () => {
             name="description"
             content="Akinola Matthew - Dev-matt is an experienced backend developer that eats and breaths Python."
           />
-          <meta property="og:url" content="https://jayfolio.vercel.app/" />
+          <meta property="og:url" content="https://portfolio-website-black-ten.vercel.app/" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Dev-Matt" />
           <meta
@@ -42,12 +42,12 @@ const project = () => {
           />
           <meta
             property="og:image"
-            content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+            content="https://res.cloudinary.com/housefree/image/upload/v1662636342/OGimage_czllew.png"
           />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="jayfolio.vercel.app" />
-          <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
+          <meta property="twitter:domain" content="black-ten.vercel.app" />
+          <meta property="twitter:url" content="https://portfolio-website-black-ten.vercel.app/" />
           <meta name="twitter:title" content="Dev-Matt" />
           <meta
             name="twitter:description"
@@ -55,7 +55,7 @@ const project = () => {
           />
           <meta
             name="twitter:image"
-            content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+            content="https://res.cloudinary.com/housefree/image/upload/v1662636342/OGimage_czllew.png"
           />
         </Head>
         {placeholderText.map((item, index) => {
@@ -75,7 +75,7 @@ const project = () => {
           name="description"
           content="Akinola Matthew - Dev-matt is an experienced backend developer that eats and breaths Python."
         />
-        <meta property="og:url" content="https://jayfolio.vercel.app/" />
+        <meta property="og:url" content="https://portfolio-website-black-ten.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Dev-matt" />
         <meta
@@ -84,12 +84,12 @@ const project = () => {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+          content="https://res.cloudinary.com/housefree/image/upload/v1662636342/OGimage_czllew.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="jayfolio.vercel.app" />
-        <meta property="twitter:url" content="https://jayfolio.vercel.app/" />
+        <meta property="twitter:domain" content="black-ten.vercel.app" />
+        <meta property="twitter:url" content="https://portfolio-website-black-ten.vercel.app/" />
         <meta name="twitter:title" content="Dev-matt" />
         <meta
           name="twitter:description"
@@ -97,7 +97,7 @@ const project = () => {
         />
         <meta
           name="twitter:image"
-          content="https://res.cloudinary.com/dubinx/image/upload/v1656803174/OGimage_mgka5q.jpg"
+          content="https://res.cloudinary.com/housefree/image/upload/v1662636342/OGimage_czllew.png"
         />
       </Head>
       <Navbar projectPage={true} />
